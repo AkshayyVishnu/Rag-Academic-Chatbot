@@ -1,0 +1,1209 @@
+ACADEMIC REGULATIONS 
+MASTER OF TECHNOLOGY (M.Tech.) PROGRAM 
+(Effective from 2024 - 2025) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+NATIONAL INSTITUTE OF TECHNOLOGY 
+WARANGAL 
+ 
+
+
+--- PAGE BREAK ---
+
+1 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations
+ 
+ 
+ 
+Academic Regulations of M.Tech. Programs effective from 2024-25 
+ 
+1. INTRODUCTION:  
+Provision of these regulations shall come into force with effect from the academic year 2024 - 
+2025 and shall be applicable to all M.Tech. Programs (unless otherwise stated) offered by the 
+Institute. 
+ 
+1.1 M.Tech Degree Programs are offered in the following specializations by the respective 
+Engineering departments: 
+ 
+S. No. 
+Department 
+M.Tech Program Name 
+1 
+Civil Engineering 
+1. Engineering Structures 
+2. Geotechnical Engineering 
+3. Transportation Engineering 
+4. Water Resources Engineering 
+5. Geoinformatics 
+6. Environmental Engineering 
+7. Construction Technology and Management 
+2 
+ 
+ 
+ 
+ 
+Electrical Engineering 
+1. Power Systems Engineering 
+2. Power Electronics and Drives 
+3. Smart Electric Grid 
+4. Control & Automation (Jointly offered with 
+Chemical Engineering) 
+3 
+Mechanical Engineering 
+1. Thermal Engineering 
+2. Manufacturing Engineering 
+3. Computer Integrated Manufacturing 
+4. Machine Design 
+5. Automobile Engineering 
+4 
+Electronics and 
+Communication Engineering 
+1. Embedded and Machine Learning 
+Systems 
+2. VLSI System Design 
+3. Advanced Communication Systems 
+5 
+Metallurgical and Materials 
+Engineering 
+1. Materials Technology 
+2. Welding Technology & Non-destructive 
+Testing 
+6 
+Chemical Engineering 
+1. Chemical Engineering 
+2. Sustainable Energy Generation & Storage 
+Technologies 
+7 
+Computer Science and 
+Engineering 
+1. Computer Science and Engineering 
+2. Computer Science and Information Security 
+8 
+Biotechnology 
+1. Biotechnology 
+1.2 The provisions of these regulations shall be applicable to any new discipline that may be 
+introduced from time to time. 
+1.3 The medium of instruction for all programs offered in the Institute is English. 
+
+
+--- PAGE BREAK ---
+
+2 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+2. ADMISSION: 
+2.1 
+Admission to National Institute of Technology Warangal shall be made in accordance 
+with the instructions received from the Ministry of Education (MoE), Government of India 
+from time to time. Seats are reserved for candidates belonging to Scheduled Castes 
+(SC), Schedules Tribes (ST), Other Backward Classes (OBC), Persons with Disability 
+(PWD), Economically Weaker Section (EWS) and other categories as per the guidelines 
+issued by MoE, from time to time. 
+ 
+2.2 
+Admissions are made on All India basis for all the programs, with reservations as per 
+Government of India norms. The selection criterion for admission into all the M.Tech 
+programs is based on valid GATE score through CCMT. The sanction of stipend will be 
+as per the guidelines prescribed by MoE, Government of India from time to time. 
+ 
+2.3 
+The admissions under self-finance M.Tech. Programs will be based on written exam and 
+interview conducted by the Department. 
+ 
+2.4 
+A limited number of admissions are offered to Armed Officers, Self- Finance and Foreign 
+Nationals under Study in India (SII), ICCR etc. in accordance with the rules applicable 
+for such admission, from time to time, issued by the MoE. 
+ 
+2.5 
+If, any time after admission, it is found that a candidate had not fulfilled all the 
+requirements stipulated in the offer of admission, in any form whatsoever, including 
+possible misinformation etc., the Dean-Academic shall report the matter to the Senate 
+recommending for the cancellation of admission of the candidate. 
+ 
+2.6 
+The institute reserves the right to cancel the admission of any student and ask him/her 
+to discontinue his/her studies at any stage of his/her studies on the grounds of 
+indiscipline or any misconduct. 
+ 
+2.7 
+The decision of the Senate, regarding sections 2.6 and 2.7 above, is final and binding. 
+ 
+2.8 
+Candidates must fulfill the medical standards required for admission as prescribed by 
+the Institute. 
+ 
+2.9 
+Every graduate student of the Institute shall be associated with his/her parent department 
+offering the degree program that the student undergoes, throughout his/her study period. 
+ 
+2.10 Candidates seeking admission into M.Tech. in Engineering (including Self-finance) 
+should have passed BE/B.Tech or equivalent degree in the subject concerned from a 
+recognized University/Institute with not less than 60% marks aggregate or equivalent 
+CGPA of 6.5 on a ten point scale for GEN/GENEWS/OBCNCL. In case of SC/ST/PWD 
+candidates 55% marks aggregate or equivalent CGPA of 6.0 on a ten point scale is the 
+eligibility requirement. 
+2.11 Eligibility and other criteria for admissions to M. Tech. courses of the Institute will be 
+reviewed and decided by the Senate from time to time. 
+
+
+--- PAGE BREAK ---
+
+3 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+3. COURSE STRUCTURE: 
+3.1 An M. Tech. program is of 4-semester duration, out of which 2 semesters is course work 
+followed by two semesters of dissertation work. 
+3.2 Each M. Tech degree program will typically consist of the following components: 
+a) 
+Program Core Courses (PCC) 
+b) 
+Program Elective Courses (PEC) 
+c) 
+Seminar and Technical Writing 
+d) 
+Summer Internship / Research Experience 
+e) 
+Minor and Major Project 
+ 
+3.3 The Departmental Academic Committee – PG & Research (DAC-PG&R) will discuss and 
+finalize the exact credits offered for the program for the components of 3.2, the semester-
+wise distribution among them, as well as the syllabi of all M. Tech. Programs along with 
+course outcomes of each course, course articulation matrix and pre-requisites, from time 
+to time and recommend the same to the Senate through Curriculum Development 
+Committee for consideration and approval. 
+3.4 Assignment of Credits to Courses: Each course has a certain number of credit(s) 
+assigned to it depending upon its lectures/tutorials/practical hours as shown below: 
+ Lectures and Tutorials: One lecture or tutorial hour per week over the period of one 14 
+week semester is assigned one credit.
+ Practical: One laboratory hour per week over the period of one 14 week semester is 
+assigned half credit.
+
+4. DEGREE REQUIREMENTS: 
+A student shall fulfil the following requirements for the award of the M.Tech degree: 
+(a) Credit Requirements: Student shall earn a Minimum of 66 – 70 Credits as prescribed 
+by the concerned Department with a CGPA of not less than 5.00 for the award of 
+Degree. 
+(b) The minimum duration for a student for complying with the Degree requirement is 
+TWO academic years from the date of first registration for his/her first semester. 
+(c) The maximum duration for a student for complying with the Degree requirement is 
+FOUR academic years from the date of first registration for his/her first semester. 
+5. ACADEMIC CALENDAR: 
+The Institute follows a semester system. An academic year generally runs from July through 
+April next year and is essentially comprised of two semesters. Typically, the 1st semester starts 
+in the 3rd week of July and ends in the last week of November; the 2nd semester starts in the 
+second/third week of December and ends in the last week of April. 
+5.1 The senate shall approve the schedule of academic activities for an academic year 
+including the dates of registration, Mid and End-semester examinations. The duration of 
+each semester will normally be of 17 weeks, which includes all examinations. The 
+number of effective teaching weeks in a semester shall be 14. 
+5.2 Academic calendar is approved by the Senate in the beginning of each academic year, 
+which also includes the date of the co-curricular and extra-curricular programs like 
+
+
+--- PAGE BREAK ---
+
+4 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+Technical seminars / Spring Spree/Institute Fest etc. Both students and faculty are required 
+to strictly adhere to the academic calendar for completion of academic activities. 
+6. RESIDENTIAL REQUIREMENT: 
+The Institute is essentially residential in nature. Unless otherwise exempted/permitted, every 
+student shall reside in one of the Halls of Residence and be a boarder of a mess to which 
+he/she is assigned. The rules relating to the residential requirements are given in Student 
+Disciplinary Manual (see https://nitw.ac.in/dms/). 
+7. ATTENDANCE: 
+Following are the rules relating to attendance requirements: 
+7.1 
+Every student is expected to have 100% attendance in each course in which he/she has 
+registered at the beginning of the semester. However, condonation for shortage of 
+attendance up to 20% (i.e., not lower than 80% aggregate attendance in any course) 
+may be granted by the Head of the concerned Department. 
+7.2 
+Additional relaxation up to 15% is allowed in extreme cases such as medical grounds 
+requiring hospitalization (minimum 3 days) or calamity in the family (Death/Serious 
+illness to blood relatives). Students are required to submit appropriate proofs such as 
+case sheet, proof of medical bills, proof of payment of Hospital bill etc. 
+7.3 
+Attendance relaxation up to 2% is allowed for girl students. Additional relaxation up to 
+5% is allowed for girl students in EAA.  
+7.4 
+Students with orthopedic disability are exempted from EAA. 
+7.5 
+A student representing the Institute in approved extracurricular activities such as Sports, 
+Games, Cultural meets, Seminars, Workshops, Conferences and Interviews arranged 
+through Centre for Career Planning and Development (CCPD), NCC/ NSS Camps shall 
+be considered as on-duty, subject to a maximum of five working days in a semester. 
+Prior permission from the concerned Head of the Department is required for availing on-
+duty permission. The period of absence, in such cases, will be counted as ‘present’ for 
+the computation of percentage of attendance at the end of semester. 
+7.6 
+Additional relaxation up to 5 working days is allowed for Placement coordinators. 
+7.7 
+For the purpose of attendance calculation, every scheduled practical class will count as 
+one unit irrespective of the number of contact hours. 
+7.8 
+Students not having the mandatory requirement of minimum attendance in any course, 
+shall not be permitted to appear for the end semester examination in that course, and 
+is awarded “R” Grade in that course. Such student has to register for the course in which 
+he/she has shortage of attendance, as and when the course is offered next. 
+7.9 
+If the period of absence is for a short duration (of not more than one week), leave 
+application should be submitted to the concerned Head of the Department, stating fully 
+the reasons for the leave requested, along with the supporting document(s). The Head 
+of the Department shall grant such leave. During such a leave period, the student will be 
+marked as absent. Even with this leave applied, the student must satisfy the minimum 
+attendance requirement to appear for the end semester examination. 
+7.10 If the period of absence exceeds one week, a prior application for grant of leave should 
+be submitted through the Head of the Department to the Dean-Academic with supporting 
+documents. The decision to grant such leave shall be taken by the Dean- Academic, 
+after considering the recommendation of the Head of the Department, provided the 
+student can maintain the minimum required attendance. 
+7.11 If a student is absent from the institute continuously for more than four weeks without 
+notifying the Dean Academic, his/her registration for that semester will stand cancelled. 
+
+
+--- PAGE BREAK ---
+
+5 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+8. LEAVES: 
+8.1 An M.Tech student is entitled to the following kinds of leave during every academic year, 
+counted from the date of commencement of the session concerned as prescribed in the 
+academic calendar of the institute. 
+8.2 Any absence over and above the prescribed type of admissible leave shall entail deduction 
+from the stipend, beside other action as may be decided by the Institute. 
+ 
+S.No
+Leave 
+Maximum Number of days 
+Sanctioning authority 
+1. 
+Casual 
+Leave 
+8 days per semester subjected to the 
+condition that such leave will not be allowed 
+for more than 5 days at a time. Casual leave 
+cannot  be combined with medical leave 
+Head of the Department 
+(HoD) 
+2. 
+Medical 
+Leave 
+8 days per semester 
+HoD with Medical 
+Certificate from the 
+Institute Medical Officer 
+ 
+9. REGISTRATION: 
+9.1 Every student is required to register on-line at the commencement of each semester on the 
+day(s) notified in the Academic Calendar and collect the registration slip signed by the 
+Faculty Advisor. However, Students with backlogs need to report physically before the 
+faculty advisor for registration. 
+9.2 Percentage attendance for all students will be counted from the date of commencement of 
+class work, irrespective of his/her date of registration. However, in case of 1st Semester, 
+attendance will be counted from date of admission into the Institute or date of 
+commencement of class work, whichever is later. 
+9.3 The registration will be organized at the respective Department under the supervision of 
+the Head of the Department / Coordinator of a respective specialization / program. 
+9.4 A student who does not register on the day announced for the purpose may be permitted, 
+in consideration of any compelling reason, late registration within the next week on payment 
+of additional late fee as prescribed by the Institute from time to time. In special cases where 
+the delay is beyond one week, Dean Academic may allow, on a case to case basis, for late 
+registration with appropriate fee. 
+9.5 After registration in each semester, each student should collect a registration sheet, which 
+indicates the courses registered by him/her in that semester, signed by the faculty advisor. 
+The student should carry this registration sheet for all the examinations in that semester. 
+This registration sheet along with Institute ID card serve the purpose of hall ticket for 
+appearing the examinations in that semester. 
+9.6 A student who has already registered may 
+(a) register for a new course in addition to the courses he/she has already registered for 
+(OR) 
+(b) opt for a new course in place of the one already registered for with the concurrence of the 
+faculty advisor. 
+Any change of the course as permissible by sub-paras (a) and (b) above must however be done 
+within one week after registration and should be intimated to the Dean, Academic. 
+9.7 
+Every student is required to register every semester without fail. If a student is permitted 
+
+
+--- PAGE BREAK ---
+
+6 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+to take a semester break, he/she has to register for that particular semester and complete 
+it before registering for the subsequent semester. 
+9.8 
+Only those students will be permitted to register who have 
+i. 
+Cleared all the Institute and Hostel dues of the previous semesters, 
+ii. 
+Paid all required fees for the current semester, and 
+iii. Not been debarred from registering for a specified period on disciplinary or any other 
+ground. 
+9.9 
+A Student can register for a backlog subject whenever it is offered. His/her previous 
+marks/grades are cancelled and will have to attend all classes and examinations as and 
+when they are conducted. Alternatively, a student can appear for make-up examination in 
+the backlog subject as and when it is conducted. 
+10. EVALUATION - Grading System: 
+10.1 As a measure of student’s performance, a 7-scale grading system using the following letter 
+grades and corresponding grade points per credit shall be followed. Grading will be done 
+based on the total marks obtained by the student in that course. 
+ 
+Letter Grade 
+S 
+A 
+B 
+C 
+D 
+P 
+U 
+Point 
+10 
+9 
+8 
+7 
+6 
+5 
+3 
+The total marks obtained in a course shall be used for awarding grades as mentioned 
+in the following Table. However, if the faculty feels, the marks may be lowered in each 
+of the ranges with a maximum change up to 10 marks.  
+ 
+Letter Grade 
+S 
+A 
+B 
+C 
+D 
+P 
+U 
+Marks 
+90-100 
+80-89 
+70-79 
+60-69 
+50-59 
+40-49 
+< 40 
+a) A student, who has not written end semester examination shall be awarded “U” grade.
+o Further, there shall be four transitional grading symbols, which can be used by the 
+examiners to indicate the special position of a student in the course.
+• I: for “Incomplete assessment”, when the student misses the End-semester 
+examination on Medical grounds (see rule 11.4). 
+• R: for 'Insufficient attendance’ in the course (see Rule 6). 
+• W: for "Temporary withdrawal' from the Institute (see rule 17). 
+• X: for "Debarred" on grounds of indiscipline/ malpractices in examinations. 
+10.2 Semester Grade Point Average (SGPA) will be computed for each semester. The SGPA 
+will be calculated as follows: 
+𝑆𝐺𝑃𝐴=
+∑𝐶𝑖𝐺𝑃𝑖
+𝑛
+1
+∑𝐶𝑖
+𝑛
+1
+ 
+ 
+   where Ci = Credits for the course 
+                GPi = the grade point obtained for the course 
+                    n = Number of courses registered in the Semester. 
+10.3 Starting from I Year II Semester a Cumulative Grade Point Average (CGPA) will be 
+computed for every student at the end of every semester. The CGPA would give the 
+Cumulative performance of the student from the first semester up to the end of the 
+
+
+--- PAGE BREAK ---
+
+7 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+semester to which it refers and calculated as follows: 
+𝐶𝐺𝑃𝐴= ∑𝑆𝑖𝐶𝑖
+𝑛
+1
+∑𝐶𝑖
+𝑛
+1
+ 
+        where, n = the total number of Semesters under consideration 
+         Ci = Total number of Credits Registered during a particular Semester   
+         Si = SGPA of the Semester. 
+10.4 The CGPA, SGPA and the grades obtained in all the subjects in a semester will be 
+communicated to every student at the end of every semester excepting last semester. In 
+its place a consolidated grade sheet (with 80 credits) will be issued. This consolidated grade 
+sheet supersedes all the earlier grade sheets. 
+10.5 Both SGPA and CGPA will be rounded off to the second place of decimal and recorded as 
+such. Whenever these grade point averages are to be used for the purpose of determining 
+the inter-se merit ranking of a group of students, only the rounded off values will be used. 
+10.6 CGPA to Marks Conversion: CGPA shall be converted into percentage marks, if required, 
+using the following formula: 
+% marks = (CGPA – 0.5) X 10 
+10.7 Transitional Grades: 
+a) Grade I: When a student gets “I” Grade for any course(s) during a semester, the SGPA 
+of that semester and the CGPA at the end of that semester will be tentatively calculated 
+ignoring this (these) course(s). After these transitional grades have been converted to 
+appropriate grades, the SGPA for the semester and CGPA at the end of the semester 
+will be recalculated after considering the new grades. 
+b) Grades R, W and X: When a student gets any of these transitional grades in any 
+course(s) during a semester, the SGPA of that semester and the CGPA at the end of 
+that semester will be tentatively calculated by taking ‘zero point’ for these course(s). 
+After these transitional grades have been converted to appropriate grades, the SGPA 
+for the semester and CGPA at the end of the semester will be recalculated after 
+considering the new grades. 
+c) 
+Grade U: When a student gets the 'U' grade in any course during a semester, the 
+SGPA and the CGPA from that semester onwards will be tentatively calculated, taking 
+'three point’ for each 'U' grade. After the 'U' grade has been substituted by better grades 
+during a subsequent semester, the SGPA and CGPA of all the semesters starting from 
+the earliest semester in which the 'U' grade has been updated, will be recomputed and 
+recorded to take this change of grade into account. 
+ 
+11. ASSESSMENT OF ACADEMIC PERFORMANCE: 
+11.1 There will be continuous assessment of a student’s performance through class 
+tests/Quizzes/Assignments etc. throughout the semester and grades will be awarded by 
+the faculty member. 
+11.2 Each theory course in a semester is evaluated for 100 marks, with following weightages. 
+Sub-component 
+ 
+ 
+           
+         Weightage 
+(a) Continuous assessment: class tests/ Quizzes/ 
+30 marks 
+Minors/Assignment etc.  
+(b) Mid semester examination  
+30 marks  
+(c) End-semester Examination 
+40 marks 
+
+
+--- PAGE BREAK ---
+
+8 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+11.3 The mode and nature of the evaluation and the corresponding weightages, for the 
+subcomponent (a) shall be intimated to the students at the beginning of the semester 
+along with the lecture schedule. 
+11.4 If due to any compelling reason (such as his/her illness, calamity in the family etc.) a 
+student fails to meet any of the requirements within/on the scheduled date and time, the 
+Head of the Department in consultation with the faculty member concerned may take 
+such steps (including the conduct of compensatory tests/examinations) as deemed fit. 
+11.5 Each laboratory course in a semester is evaluated for 100 marks, through continuous 
+assessment. The marks for continuous assessment may be distributed among various 
+components like class work performance, Lab records, Quizzes, viva, skill tests/ 
+assignments/ mini projects. It is not mandatory to conduct end semester examination for 
+a laboratory course. However, if it is conducted, the weightage for the end semester 
+examination shall be less than or equal to 40 marks. The scheme of evaluation has to 
+be informed to students by the respective faculty in the beginning of the laboratory 
+course. 
+11.6 A Seminar Assessment Committee will be formed by the Head of the Department/Centre 
+for the evaluation of performance at Seminars. Every student is expected to attend all 
+the seminars of all the students of the batch held in the Department/Centre during the 
+semester. Due weightage shall be given to a student's attendance in the overall 
+evaluation of this requirement. 
+11.7 Comprehensive Viva Evaluation: 
+i. The comprehensive viva voce examination carrying 2 credits will cover the entire 
+course of study up to 2nd Semester. The viva voce shall be conducted by a committee 
+constituted by the Head of the Department. The committee will also have an expert 
+from allied Department nominated by Dean, Academic. 
+ii. A student who has failed in the comprehensive viva-voce shall be required to present 
+himself/herself again within a period of two months for the viva-voce on a date to be 
+fixed by the concerned Head of the Department /Centre. 
+11.8 Dissertation Evaluation: 
+i. The dissertation carried out by a student is evaluated for 32 credits. The dissertation 
+shall be submitted as per the schedule given in the academic calendar.  
+ii. The dissertation supervisor will periodically review the progress of the student and 
+finally give his/her assessment of the work done by the student. 
+iii. The Dissertation Part – A will be evaluated for 100 marks, with the following 
+weightages: 
+Sub-component 
+ 
+ 
+ 
+         Weightage 
+a) 
+Periodic evaluation by Guide 
+40 marks 
+b) 
+Mid-term review 
+20 marks 
+c) 
+End Semester viva-voce examination 
+40 marks 
+The midterm review and the end semester viva-voce examination will be conducted 
+by a committee constituted by the Head of the Department. 
+iv. The Dissertation Part – B will be evaluated for 100 marks, with the following 
+weightages: 
+Sub-component  
+ 
+ 
+ 
+         Weightage 
+a) Periodic evaluation by Guide 
+40 marks 
+b) Midterm review 
+20 marks 
+c) End Semester viva-voce examination 
+40 marks 
+
+
+--- PAGE BREAK ---
+
+9 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+The end semester viva-voce examination will be conducted by External Examiner 
+along with an evaluation committee constituted by the Head of the Department. The 
+midterm evaluation will be done by the evaluation committee. 
+v. A student will be permitted to submit the dissertation only if he/she completes all the 
+courses as required in the program. 
+vi. The Departments have to evolve rubrics for evaluation of Dissertation Part-A and 
+Part-B. The marks may be distributed among various components like selection of 
+topic, problem statement, literature review, methodology, oral and written 
+presentation of the work done and performance in viva-voce examination. 
+vii. Dissertation and Viva-Voce: A student shall be required to submit a report on the 
+Dissertation work carried out by him/her. The template for the dissertation report may 
+be downloaded from (https://www.nitw.ac.in/main/PGForms/NITW/). The students 
+are required to submit a report showing that the plagiarism is within 20% along with 
+the three annexures as stipulated in Anti-plagiarism policy. Three/four bound copies 
+along with a soft copy of the dissertation shall be submitted to the Head of the 
+Department/Centre within the last date prescribed in the Academic Calendar for the 
+purpose. Dissertation viva - voce will be held within the date fixed in the academic 
+calendar and the grades will be finalized by the committee. 
+viii. If the performance of the student in either Dissertation Part-A or Dissertation Part-B 
+is not satisfactory, he/ she will be awarded ‘U’ grade. The student has to repeat the 
+dissertation work by registering in the next semester. Such students may be given an 
+option either to continue with the same topic and with the same guide or change the 
+guide and the topic of his/ her dissertation. 
+ix. Extension of dissertation work (Part-B) beyond the deadline of submission in very 
+special case may be granted by the Dean (Academic) on recommendation of the 
+DAC-PG&R for a maximum period of 3 months and he/she will be awarded “I” Grade. 
+The viva-voce has to be completed within the extension period. The student shall not 
+be eligible either for award of scholarship during the extension period or any 
+medal/prize. However, if the student had been absent on medical grounds and his/her 
+dissertation had been extended, he/she may be eligible for award of medal or prize, if 
+any. If the above-mentioned extension period encroaches into the next semester, the 
+student need not pay the tuition fee. 
+11.9 The Institute Scholarship of a student will be withheld in case his/her CGPA at the end 
+of any semester falls below 6.50. However, in the case of students belonging to 
+SC/ST/PWD it is 6.00. The scholarship will be restored with retrospective effect based 
+on recommendation of Head of the Department whenever the CGPA crosses at  least 
+6.5 (for SC/ST/PWD 6.0). 
+ 
+12. MID AND END-SEMESTER EXAMINATIONS: 
+12.1 The Mid and End-semester examinations in respect of theory courses will be conducted 
+centrally by the examination branch as per the schedule given in the academic calendar. 
+12.2 Head of the Department sends the list of courses registered by each student for the 
+semester along with percentage of attendance. 
+12.3 Appearing in the end-semester examination in the theory and laboratory (if conducted) 
+courses is mandatory for a student. Unless exempted as stated in rule 11.4, if a student 
+fails to appear for the end semester examination, he/she shall be awarded ‘U’ grade in 
+the course. 
+
+
+--- PAGE BREAK ---
+
+10 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+12.4 However, if a student misses the end-semester examinations due to a compelling reason 
+like serious illness which necessitates hospitalization or a calamity in the family, he/she 
+may appeal to the Dean-Academic before commencement of examination through 
+his/her Head of the Department after getting Medical Officer from Institute Medical 
+Officer for permitting himself/herself to appear in the subsequent examination(s), when 
+conducted next. A committee consisting of the following members may, after examining 
+the documents and being convinced about the merit of the case, recommend permitting 
+him/her to appear in the subsequent examination(s), when conducted next, condoning 
+his/her absence. In such cases, transitory grade ‘I’ is temporarily awarded to the student 
+in the course. Re-end examination will be conducted once in a year, at the time of 
+Make-up examination. 
+Committee: 
+a) Dean-Academic, Chairman. 
+b) Dean, Students Welfare 
+c) 
+Concerned Head of the Department 
+d) The Institute Medical officer 
+e) Associate Dean, Examinations (Convener) 
+12.5 Students will be permitted to appear in the examinations in only those courses for which 
+they have registered at the beginning of the semester. 
+12.6 The final grades awarded to the students in a course must be submitted by the faculty 
+member, within five working days from the date of the last examination to the concerned 
+Head of the Department. The Head of the Department shall place the grades of students 
+in all courses before the DAC-PG&R for its consideration and recommendation. The 
+grades recommended by the DAC-PG&R shall be sent to the examination branch. 
+12.7 
+Any change of grade of a student in a course consequent upon detection of any genuine 
+error of omission and/or commission on part of the concerned faculty member must be 
+recommended by the DAC-PG&R and shall be forwarded by the faculty member through 
+the Head of the concerned Department within 5 (five) days from the date of publication 
+of the results. 
+12.8 As a process of learning by students and also to ensure transparency, the answer scripts 
+after correction of class tests, written examinations, assignments etc., shall be shown to 
+the students within two weeks from the date of test/examination. The performance of the 
+students in these examinations shall be discussed in the Class Review Committee 
+meeting. 
+12.9 In order to ensure transparency in the evaluation of scripts of end-semester examination, 
+those answer scripts also shall be shown to the students up to one day before the 
+finalization of grades in the DAC-PG&R. Once the Grades are finalized by DAC-PG&R, 
+the student will no longer have any right to verify his/her answer scripts. 
+12.10 The student can appeal to DAAC for any arbitration within 5 working days from the date 
+of official publication of results in the Institute Website. 
+ 
+13. EVALUATION OF INTEGRATED (THEORY + LABORATORY) COURSES: 
+13.1 For integrated courses, the criterion of 80% minimum attendance shall be satisfied 
+separately in theory and laboratory classes. Otherwise he/she will be awarded ‘R’ grade. 
+13.2 The weightage for evaluation shall be based on credit ratio of the theory to laboratory in 
+
+
+--- PAGE BREAK ---
+
+11 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+that course. For example, in a 2-0-2 (3 credit course), the weightage for the laboratory shall 
+be 33% (1/3). For a 3-0-2 or 2-1-2 (4 credit course), the weightage for the laboratory 
+shall be 25% (1/4). 
+13.3 For the integrated course, the total marks need to be calculated based on the above 
+weightage. 
+13.4 All the rules for grading applicable to other courses may be followed for grading any 
+integrated course. 
+13.5 The evaluation scheme for both theory and laboratory components shall be informed to 
+the student through lecture plan in the beginning of the course. 
+13.6 In case of makeup examination, the student shall be evaluated in both theory and 
+laboratory components and after arriving at the total marks based on the weightage, the 
+applicable rules shall be followed for awarding a grade. 
+ 
+14. AWARD OF CLASS: 
+14.1 First Division with Distinction: A student who has passed all the courses without 
+securing R, X, or U Grades during the period of study and with a CGPA of 8.00 and 
+above is considered eligible for the award of First Division with Distinction. 
+14.2 First Division: 
+a) A student failing to satisfy Rule 13.1, even if he/she gets a CGPA of 8.00 or more 
+will be eligible for the award of First Division only. 
+b) A student with a CGPA of 6.50 and above but less than 8.00 is considered eligible 
+for the award of First Division. 
+14.3 Second Division: A student with a CGPA of 5.00 and above but less than 6.50 is 
+considered eligible for the award of Second Division. 
+15. MAKEUP EXAMINATION: 
+Makeup examinations will be conducted once in an academic year, during summer. Students 
+appearing in Makeup examination shall be governed by the following rules: 
+15.1 A Student with 'U' grade(s) can appear in Make-up examination conducted at the end of 
+Academic year, or register in Study mode, whenever the course is offered. In case of 
+Study mode, his/her previous marks/grades are cancelled and he/she will have to attend 
+all classes and examinations along with next batch of students. Major changes in the 
+timetable shall not be entertained to accommodate backlog students. 
+15.2 Students with “R” Grade in any course are not eligible for writing the makeup 
+examination for that course. 
+15.3 Students with “U” or “I” Grade only are eligible to write makeup examination. The marks 
+obtained by the student in continuous evaluation will be added to the marks obtained in 
+makeup examination and will be graded as per the grading used for his/ her class. 
+15.4 A student may appear any number of times in the makeup examination in the courses 
+in which he / she has obtained "U" grade. 
+15.5 A student who has obtained ‘U’ grade in makeup examination may register in the 
+subsequent semester for the course in “study” mode. 
+15.6 The schedule for makeup examination will be given in the Academic calendar. 
+15.7 A student can register for makeup examinations in any number of courses. The schedule 
+of makeup examinations will not be altered to suit individual students. 
+
+
+--- PAGE BREAK ---
+
+12 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+16. DISSERTATION WORK IN COLLABORATION WITH INDUSTRY: 
+16.1 A student may, with the approval of the Head of the Department/Centre, visit an industry 
+or a Research Laboratory for data collection, discussion of the dissertation, experimental 
+work, survey, field studies, etc. during the project period. Projects sponsored by the 
+industry or Research Laboratories will be encouraged and a close liaison with such 
+organizations will be maintained. 
+16.2 A student may, with the approval of Head of the Department/Centre, do the dissertation 
+work in collaboration with an industry or a Research and Development Organization. 
+The student shall acknowledge the involvement and / or contribution of an industry, R&D 
+organization in completing the project in his/her dissertation and a certificate to this effect 
+issued by the supervisor from the industrial organization will be included in the 
+dissertation. 
+16.3 It is mandatory for all students (especially those who do their dissertation in an Industry, 
+R&D organization in India or abroad) to make full disclosure of all data on which they 
+wish to base their dissertation. They cannot claim confidentiality simply because it would 
+come into conflict with the Industry’s or R&D laboratory’s own interests. Any tangible 
+intellectual property other than copyright of dissertation may have to be assigned to the 
+Institute. The copyright of the dissertation itself would however lie with the student as 
+per the IPR policy in force. 
+16.4 In addition to the Supervisor from the department/center guiding the dissertation work, 
+a Joint Supervisor may be appointed from the Industry and Research Laboratory with 
+the approval of DAC - PG&R. A certificate from the joint supervisor will be included in 
+the dissertation. A member of faculty of the Institute, who is the internal supervisor, may, 
+if felt necessary, visit the industry or the Research Laboratory in connection with the 
+dissertation work of his/her student. 
+17. SUMMER INTERNSHIP (Optional): 
+A student may undergo summer internship for a period of eight weeks, if he/she wishes, 
+immediately after the completion of 2nd Semester. 
+ 
+18. TEMPORARY WITHDRAWAL: 
+18.1 A student who has been admitted to an M.Tech. program of the institute may be 
+permitted to withdraw temporarily for a period of one semester or more from the Institute 
+on grounds of prolonged illness/acute problem in the family, which compelled him/her to 
+stay at home, provided that: 
+(a) He/she applies to the Institute through Head of the department within 15 days of the 
+commencement of the semester or from the last date of attending the classes, 
+whichever is later, stating fully the reasons for such withdrawal together with 
+supporting documents and endorsement of the parent/guardian. 
+(b) The institute is satisfied that, inclusive of the period of withdrawal, the student is 
+likely to complete all the requirements for the degree within the time limits specified. 
+(c) There are no outstanding dues against him/her or demands from him/her in the 
+Institute/ Department/ Hostel / Library etc. 
+(d) A student who has been granted temporary withdrawal from the institute under the 
+above provisions will be awarded ‘W’ grade. If  the student applies for withdrawal 
+
+
+--- PAGE BREAK ---
+
+13 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+before start of the semester or within 15 days of the commencement of the semester, 
+he/she will be exempted from paying the tuition fee for that semester.  
+18.2 A student shall be granted only one such temporary withdrawal during his/her tenure. 
+18.3 A student, who wishes to join the job, after successful completion of the entire course 
+work, may be permitted to pursue dissertation on part-time basis provided: 
+i. 
+Sufficient facilities are available in the organization where he/she is working 
+ii. 
+There is a competent supervisor in the organization 
+iii. The minimum period for submission of dissertation work shall be double the 
+amount of the balance period. 
+iv. The dissertation of such a part-time student shall be under the guidance of two 
+supervisors, one from the organization and the other from the Institute. 
+v. 
+If the student at the time of joining the job has completed substantial part of his/ her 
+dissertation work (Part-B) such student may be permitted based on the 
+recommendations of DAC-PG&R to submit his/ her thesis along with the regular 
+students. There is no need for co-supervisor from his/ her organization. 
+ 
+18. SWAYAM / NPTEL COURSES: 
+18.1 A student may complete SWAYAM-NPTEL courses and transfer equivalent credits to 
+partially complete the mandatory credit requirements. 
+18.2 The Department may permit students to register from other platforms, by taking care of 
+evaluation and grading. 
+18.3 Before the commencement of each Semester, Parent Department shall release a list of 
+SWAYAM-NPTEL courses approved as Departmental Elective/ Open Elective courses 
+/MNC courses. 
+18.4 A student shall only request for transfer of credits from such notified SWAYAM-NPTEL 
+Courses as published by the concerned Departments. 
+18.5 SWAYAM-NPTEL Courses are considered for transfer of credits only if the concerned 
+student has successfully completed and obtained the SWAYAM-NPTEL Certificate to 
+this effect. 
+18.6 A student cannot transfer credits from SWAYAM-NPTEL Courses for any other type of 
+Courses not permitted in the concerned Curriculum. 
+18.7 Students shall register for the approved Courses as per the schedule announced by 
+SWAYAM-NPTEL. 
+18.8 The credit equivalence for SWAYAM-NPTEL Courses: 12 weeks – 3credits; 8 weeks 
+ 
+ 
+– 2 credits; 4 weeks – 1 or 0 credits. 
+18.9 The marks obtained by the student for such SWAYAM-NPTEL Courses will be converted 
+to grades as per the evaluation guidelines (8.1) suggested.  
+18.10 A student must submit the original SWAYAM-NPTEL Course Certificates to the Head of 
+the Parent Department concerned, with a written request for the transfer of the equivalent 
+credits. On verification of the SWAYAM-NPTEL Course Certificates and approval by the 
+Head of the Department concerned, the SWAYAM-NPTEL Course(s) and equivalent 
+Credits will be included in Course (with associated Credits) Registration of the concerned 
+student in the Semester immediately following the completion of the SWAYAM-NPTEL 
+Course(s). 
+18.11 If any faculty is assigned for the evaluation of the courses taken through these platforms, 
+he/she can evaluate like any regular course by following the assessment and evaluation 
+guidelines. 
+
+
+--- PAGE BREAK ---
+
+14 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations 
+ 
+ 
+ 
+18.12 The Institute shall not reimburse any fees/expenses, a student may incur for the 
+SWAYAM-NPTEL Courses. 
+ 
+19. EXIT POLICY FOR M.Tech.: 
+The student is permitted to exit with a PG Diploma based on the student’s request at the end 
+of first year subjected to passing all the courses in first year and comprehensive viva voce. 
+ 
+20. INTEGRATED M.Tech-PhD: 
+20.1 M.Tech students of NIT Warangal with a CGPA more than 8.00 (Open/OBC) / 7.50 (for 
+SC/ST/PWD) at the end of first year are eligible for Full Time Ph.D.  
+20.2 The selection of the student is based on the merit in the written test and the interview 
+conducted by the department 
+20.3 The student has to complete 15 credits after getting enrolled into Ph.D.  
+20.4 A maximum of 25% seats may be allotted from the quota of the Ph.D. fellowships allotted 
+to the department.  
+20.5 All the other regulations are same as that of Full-Time PhD scholars. 
+20.6 The student will be given an exit option at the end of two years. 
+ 
+21. STUDENT FEEDBACK: 
+It is mandatory for every student to submit the feedback on each and every course, he/she has 
+undergone, at the end of every semester. At the end of 8th semester, Exit feedback is also to 
+be submitted. Results will be withheld for those students who have not submitted the feedback. 
+All such students have to a) pay a fine of Rs. 500/- b) obtain permission from Dean (Academic) 
+and c) fill the feedback for viewing the withheld result. 
+ 
+22. CHANGE OF REGULATIONS: 
+The academic programs of the Institute are governed by Rules and Regulations approved by 
+the Senate from time to time. The Senate is a statutory and supreme body that governs all 
+academic matters of the Institute, and the rulings of the Chairman, Senate (Director of The 
+Institute) are final in regard to all academic issues. 
+ 
+Notwithstanding all that has been stated above, the Senate, has the right to modify any of the 
+above rules and regulations from time to time. All such modifications shall be documented and 
+numbered sequentially and shall be made available in the Institute website in the Institute 
+website under Ordinances. 
+  
+
+
+--- PAGE BREAK ---
+
+15 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations
+ 
+ 
+ 
+ 
+ACADEMIC COMMITTEES: FUNCTIONS AND RESPONSIBILITIES 
+ 
+Committee 
+Constitution of the 
+Committee 
+Guidelines 
+Functions 
+DEPARTMENTAL ACADEMIC COMMITTE – PG&R  
+(DAC-PG&R) 
+Chairman: Head of the 
+Department 
+Members: All 
+Professors and 
+Associate Professors 
+and Faculty Advisors, 
+Program Coordinators 
+ Tenure: two years. 
+ 
+There shall be one DAC- 
+PG&R for every 
+department, which is 
+involved in the teaching 
+for any of the M.Tech. 
+program. 
+ 
+The Head of the 
+department will nominate 
+one of the members as 
+secretary. 
+ To monitor the conduct of all 
+postgraduate courses offered 
+by the Department and course 
+work of M.Tech program. 
+ To ensure academic standards 
+and excellence of the courses 
+offered by the department. 
+ Review and Recommend the 
+grades to senate for approval. 
+ To consolidate the registration 
+of the students and 
+communicate to the course 
+instructor and Dean- Academic. 
+ To consider any matter related 
+to the postgraduate program(s) 
+of the Department. 
+ To take up any responsibility or 
+function assigned by the 
+Senate or the Chairman of the 
+Senate or Chairman of DAC- 
+PG&R. 
+ To report the cases of 
+malpractices to the 
+Malpractices and Disciplinary 
+Action Committee. 
+CLASS REVIEW COMMITTEEE 
+(CRC) 
+Chairman: Head of the 
+Dept. / Senior Faculty of 
+the Department 
+concerned, preferably 
+not associated with 
+teaching of the class, to 
+be nominated by the 
+Head of the Department 
+concerned. 
+Members: All faculty 
+members handling the 
+class, four students, to 
+be chosen by the 
+students of the class 
+from amongst 
+themselves. 
+Convener / Secretary: 
+Faculty advisor of the 
+Every Class (group of 
+students registered for 
+a course and taking 
+the course together in 
+a section/class) of the 
+M.Tech Program shall 
+have a Class Review 
+Committee, consisting 
+of Faculty and Students. 
+ The Class Review Committee 
+shall meet at least twice in a 
+semester, once between four to 
+five weeks and another 
+between eight to nine weeks 
+after the commencement of 
+classwork. 
+ The basic responsibilities of the 
+Class Review Committee are to 
+review periodically the progress 
+of the classes, to discuss 
+problems concerning curriculum 
+and syllabi and the conduct of 
+the classes. 
+ The committee will review the 
+performance of the class in 
+various exams conducted as 
+part of continuous evaluation till 
+
+
+--- PAGE BREAK ---
+
+16 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations
+ 
+ 
+ 
+class 
+Tenure: One Semester 
+that date. 
+ Each CRC will communicate its 
+recommendations to the Head 
+of the Department / DAC- 
+PG&R of the parent teaching 
+department. 
+ The minutes of each CRC 
+meeting shall be recorded in a 
+separate register maintained in 
+the parent/teaching 
+department. 
+ Any appropriate responsibility 
+or function assigned by the 
+DAC- PG&R or the chairman of 
+the DAC- PG&R 
+DEPARTMENTAL ACADEMIC APPEALS 
+COMMITTEE (DAAC) 
+Chairman: Head of the 
+Department 
+Members: Three faculty 
+members of the 
+Department consisting of 
+one Professor, one 
+Associate Prof. and 
+one Asst. Prof. 
+ Nominee: One 
+Professor from outside 
+the Department 
+nominated by Dean- 
+Academic 
+ There shall be one DAAC 
+for every department. 
+ The Chairman may co-opt 
+and / or invite more 
+members. 
+ If the concerned instructor 
+is a member of DAAC then 
+he/she shall keep himself 
+out of the Committee 
+during deliberations. 
+ The quorum for each 
+meeting shall be a 
+minimum of THREE 
+(Professor from outside 
+department is mandatory). 
+ To receive grievance 
+/complaints in writing from the 
+students regarding anomaly in 
+award of grades due to bias, 
+victimization, erratic evaluation, 
+etc. and redress the 
+complaints. 
+ To interact with the concerned 
+course instructor and the 
+student separately before 
+taking the decision. 
+ The decision of the DAAC will 
+be based on simple majority 
+ The recommendations of the 
+DAAC shall be communicated 
+to the Dean-Academic for 
+further appropriate action as 
+required. 
+CURRICULUM 
+DEVELOPMENT 
+COMMITTEE (CDC) 
+Chairman: Head of the 
+Dept. 
+Members: All professors 
+and Associate 
+Professors; 
+Three External 
+members: One from 
+Academics, One from 
+Industry, One from R&D 
+labs (One of the above 
+may be an alumnus) 
+ All the members must 
+possess Ph. D. 
+ The Chairman will 
+nominate one of the 
+members as secretary. 
+ The Chairman may co-opt 
+and / or invite more 
+members including 
+external experts while 
+framing / revising the 
+curriculum. 
+ To develop the curriculum for 
+the postgraduate courses 
+offered by the department and 
+recommend the same to the 
+Senate. 
+ The CDC is required to meet 
+at least once in two years. 
+ To review the internal audit 
+reports submitted by faculty 
+
+
+--- PAGE BREAK ---
+
+17 | P a g e 
+w.e.f. 2024-25 
+M.Tech. – Regulations
+ 
+ 
+ 
+ACADEMIC AUDIT 
+COMMITTEE – 
+DEPT. (AACD) 
+Chairman: Professor 
+nominated by Director 
+Members: One 
+Department Nominee 
+Convener/Secretary: 
+Head of the Department 
+ The duration of the 
+members of the committee 
+will be two years 
+ To recommend corrective 
+measures, if any. 
+ To send a consolidated report 
+to Academic Audit Committee – 
+Institute 
+ACADEMIC AUDIT 
+COMMITTEE – 
+INSTITUTE (AACI) 
+Chairman: Director 
+ Members: Dean 
+(Academic), Two 
+professors nominated 
+by Director 
+ The members of the 
+duration of the committee 
+is TWO years. 
+ To review the 
+recommendations of AACD of 
+each department 
+ To initiate appropriate 
+measures (counseling / training 
+etc.). 
+FACULTY ADVISOR 
+Faculty Advisors: 
+nominated by the Head 
+of the Department 
+ In case of PG, One 
+Faculty advisor for each 
+program. 
+ To help the Students in 
+planning their courses and 
+activities during study. 
+ To guide, advice and counsel 
+the students on academic 
+program and registration. 
+ To register the students for the 
+course work in both the even 
+and odd semesters. 
+ To present the results of even 
+and odd semesters to DAC- 
+PG&R 
+ 
