@@ -1,0 +1,96 @@
+# ============================================================
+# NITW ERP CHATBOT — CONFIG FILES
+# ============================================================
+# Save each section as its own file in your project root
+# ============================================================
+
+
+# ════════════════════════════════════════════════════════════
+# FILE: .gitignore
+# ════════════════════════════════════════════════════════════
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.venv/
+env/
+
+# ChromaDB local storage
+chroma_db/
+
+# Extracted text (regeneratable)
+extracted/
+chunks/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+
+# ════════════════════════════════════════════════════════════
+# FILE: .env.example
+# ════════════════════════════════════════════════════════════
+
+# Get your free Gemini API key from: https://aistudio.google.com/apikey
+GOOGLE_API_KEY=your_gemini_api_key_here
+
+
+# ════════════════════════════════════════════════════════════
+# FILE: requirements.txt
+# ════════════════════════════════════════════════════════════
+
+# Core
+pymupdf>=1.24.0
+langchain>=0.3.0
+langchain-google-genai>=2.0.0
+chromadb>=0.5.0
+streamlit>=1.38.0
+python-dotenv>=1.0.0
+
+# Phase 2 — Hybrid Search
+rank-bm25>=0.2.2
+
+# Phase 2 — Multimodal (uncomment when needed)
+# unstructured[pdf]>=0.15.0
+
+
+# ════════════════════════════════════════════════════════════
+# FILE: LICENSE
+# ════════════════════════════════════════════════════════════
+
+MIT License
+
+Copyright (c) 2026 Akshay
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
