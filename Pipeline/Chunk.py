@@ -13,6 +13,7 @@ CHUNK_SIZE = 1000       # characters per chunk
 CHUNK_OVERLAP = 200     # characters of overlap between chunks
 
 
+
 def recursive_character_split(text, chunk_size=1000, chunk_overlap=200):
     """
     Split text into chunks using a hierarchy of separators.
@@ -27,15 +28,15 @@ def recursive_character_split(text, chunk_size=1000, chunk_overlap=200):
 
     separators = ["\n\n", "\n", ". ", " ", ""]
 
-    def split_text(text, separators):
+    def split_text(text, seps):
         """Recursively split text using the separator hierarchy."""
 
         if len(text) <= chunk_size:
             return [text]
 
         # Find the best separator (first one that exists in the text)
-        separator = separators[-1]
-        for sep in separators:
+        separator = seps[-1]
+        for sep in seps:
             if sep in text:
                 separator = sep
                 break
@@ -60,7 +61,7 @@ def recursive_character_split(text, chunk_size=1000, chunk_overlap=200):
                     chunks.append(current_chunk)
 
                 if len(piece) > chunk_size:
-                    remaining_seps = separators[separators.index(separator) + 1 :]
+                    remaining_seps = seps[seps.index(separator) + 1 :]
                     if remaining_seps:
                         sub_chunks = split_text(piece, remaining_seps)
                         chunks.extend(sub_chunks[:-1])
