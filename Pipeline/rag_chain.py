@@ -2,27 +2,71 @@
 import os
 import sys
 import time
+import itertools
 from dotenv import load_dotenv
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
-from langchain_core.documents import Document
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
 
 load_dotenv()
 
-api_key = os.getenv("GOOGLE_API_KEY")
-if not api_key:
+
+def load_api_keys(prefix):
+    keys = []
+    base = os.getenv(prefix)
+    if base:
+        keys.append(base)
+    i = 2
+    while True:
+        k = os.getenv(f"{prefix}{i}")
+        if not k:
+            break
+        keys.append(k)
+        i += 1
+    return keys
+
+
+# --- LLM provider selection ---
+# Set LLM_PROVIDER=groq in .env to use Groq instead of Gemini for the LLM.
+# Embeddings always use Google (Gemini embedding model).
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "google").lower()
+
+embed_keys = load_api_keys("GOOGLE_API_KEY")
+if not embed_keys:
     print("ERROR: GOOGLE_API_KEY not found!")
     exit(1)
 
-query_api_key = os.getenv("GOOGLE_API_KEY2")
-if not query_api_key:
-    print("WARNING: GOOGLE_API_KEY2 not found, falling back to GOOGLE_API_KEY for LLM.")
-    query_api_key = api_key
+if LLM_PROVIDER == "groq":
+    try:
+        from langchain_groq import ChatGroq
+    except ImportError:
+        print("ERROR: langchain-groq not installed. Run: pip install langchain-groq")
+        exit(1)
+    llm_keys = load_api_keys("GROQ_API_KEY")
+    if not llm_keys:
+        print("ERROR: LLM_PROVIDER=groq but GROQ_API_KEY not found in .env")
+        exit(1)
+    print(f"LLM provider: Groq ({len(llm_keys)} key(s))")
+else:
+    from langchain_google_genai import ChatGoogleGenerativeAI
+    llm_keys = embed_keys  # same keys for both
+    print(f"LLM provider: Google Gemini ({len(llm_keys)} key(s))")
+
+print(f"Embed keys: {len(embed_keys)}")
+
+_embed_key_cycle = itertools.cycle(embed_keys)
+_llm_key_cycle   = itertools.cycle(llm_keys)
+
+
+def next_embed_key():
+    return next(_embed_key_cycle)
+
+
+def next_llm_key():
+    return next(_llm_key_cycle)
 
 
 try:
@@ -30,13 +74,15 @@ try:
 except ImportError:
     from langchain_community.vectorstores import Chroma
 
-CHROMA_DB_DIR = "chroma_db"
+CHROMA_DB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "chroma_db")
 COLLECTION_NAME = "nitw_documents"
 EMBEDDING_MODEL = "models/gemini-embedding-001"
 EMBEDDING_DIMENSIONS = 768
-LLM_MODEL = "gemini-2.0-flash"  # Free tier, fast, good for RAG
-LLM_TEMPERATURE = 0.1           # Low = more factual, less creative
-TOP_K = 4                       # Number of chunks to retrieve per query
+LLM_MODEL_GOOGLE = "gemini-2.0-flash"
+LLM_MODEL_GROQ   = "llama-3.3-70b-versatile"   # fast, free on Groq
+LLM_TEMPERATURE  = 0.1
+TOP_K            = 4
+RPM_PER_KEY      = 30 if LLM_PROVIDER == "groq" else 15
 
 
 SYSTEM_PROMPT = """You are an AI assistant for NIT Warangal students. Your job is to answer 
@@ -62,100 +108,82 @@ CONTEXT FROM NIT WARANGAL DOCUMENTS:
 HUMAN_PROMPT = "{question}"
 
 
+def make_embeddings(key):
+    return GoogleGenerativeAIEmbeddings(
+        model=EMBEDDING_MODEL,
+        google_api_key=key,
+        output_dimensionality=EMBEDDING_DIMENSIONS,
+    )
+
+
+def make_llm(key):
+    if LLM_PROVIDER == "groq":
+        return ChatGroq(
+            model=LLM_MODEL_GROQ,
+            groq_api_key=key,
+            temperature=LLM_TEMPERATURE,
+            max_retries=0,
+        )
+    return ChatGoogleGenerativeAI(
+        model=LLM_MODEL_GOOGLE,
+        google_api_key=key,
+        temperature=LLM_TEMPERATURE,
+        max_retries=0,
+    )
+
+
 def load_vectorstore():
-    
     if not os.path.exists(CHROMA_DB_DIR):
         print(f"ERROR: ChromaDB not found at '{CHROMA_DB_DIR}/'")
         exit(1)
-    
-    embeddings = GoogleGenerativeAIEmbeddings(
-        model=EMBEDDING_MODEL,
-        google_api_key=api_key,
-        output_dimensionality=EMBEDDING_DIMENSIONS,
-    )
-    
+
     vectorstore = Chroma(
         persist_directory=CHROMA_DB_DIR,
-        embedding_function=embeddings,
+        embedding_function=make_embeddings(next_embed_key()),
         collection_name=COLLECTION_NAME,
     )
-    
+
     count = vectorstore._collection.count()
     print(f"Loaded ChromaDB with {count} embedded chunks")
-    
     return vectorstore
 
 
 def create_rag_chain(vectorstore):
- 
-    
-    # 1. Create a retriever from the vector store
-    #    k=4 means "return the 4 most similar chunks"
-    retriever = vectorstore.as_retriever(
-        search_type="similarity",
-        search_kwargs={"k": TOP_K},
-    )
-    
-    # 2. Create the LLM
-    llm = ChatGoogleGenerativeAI(
-        model=LLM_MODEL,
-        google_api_key=query_api_key,
-        temperature=LLM_TEMPERATURE,
-        max_retries=2,
-    )
-    
-    # 3. Create the prompt template
     prompt = ChatPromptTemplate.from_messages([
         ("system", SYSTEM_PROMPT),
         ("human", HUMAN_PROMPT),
     ])
-    
-    # 4. Helper function: format retrieved documents into a single string
-    def format_docs(docs):
-   
-        formatted = []
-        for i, doc in enumerate(docs, 1):
-            source = doc.metadata.get("source", "Unknown")
-            formatted.append(
-                f"--- Document {i} (Source: {source}) ---\n{doc.page_content}"
-            )
-        return "\n\n".join(formatted)
-    
-    # 5. Build the chain using LangChain Expression Language
-    
-    rag_chain = (
-        {
-            "context": retriever | format_docs,
-            "question": RunnablePassthrough(),
-        }
-        | prompt
-        | llm
-        | StrOutputParser()
-    )
-    
-    # Also return retriever separately so we can show source documents
-    return rag_chain, retriever
+    # llm_chain has no LLM baked in — we inject a fresh one (with rotated key) per call
+    return prompt, vectorstore
 
 
-def ask_with_sources(rag_chain, retriever, question, max_retries=5):
+def ask_with_sources(prompt, retrieved_docs, question, max_retries=None, min_delay=None):
+    """Ask a question — rotates to next LLM key on every 429 instead of waiting."""
+    max_retries = max_retries or len(llm_keys) * 3
+    # Minimum seconds between requests: safe rate across all keys combined
+    if min_delay is None:
+        min_delay = 60 / (RPM_PER_KEY * len(llm_keys))  # try each key a few times
+
     print(f"\nQuestion: {question}")
     print("-" * 50)
 
+    formatted_context = "\n\n".join(
+        f"--- Document {i} (Source: {doc.metadata.get('source', 'Unknown')}) ---\n{doc.page_content}"
+        for i, doc in enumerate(retrieved_docs, 1)
+    )
+
+    t_start = time.time()
+
     for attempt in range(max_retries):
+        key = next_llm_key()
+        llm_chain = prompt | make_llm(key) | StrOutputParser()
         try:
-            # Retrieve docs once and reuse — avoids a second embedding API call
-            retrieved_docs = retriever.invoke(question)
-
-            # Build context string manually so we can reuse the same docs
-            formatted_context = "\n\n".join(
-                f"--- Document {i} (Source: {doc.metadata.get('source', 'Unknown')}) ---\n{doc.page_content}"
-                for i, doc in enumerate(retrieved_docs, 1)
-            )
-
-            # Invoke chain with pre-built context to skip second retrieval
-            answer = rag_chain.invoke(question)
+            answer = llm_chain.invoke({"context": formatted_context, "question": question})
+            # Throttle: sleep any remaining time to stay under combined RPM budget
+            elapsed = time.time() - t_start
+            if elapsed < min_delay:
+                time.sleep(min_delay - elapsed)
             print(f"\nAnswer:\n{answer}")
-
             print(f"\n--- Sources Used ({len(retrieved_docs)} chunks) ---")
             for i, doc in enumerate(retrieved_docs, 1):
                 source = doc.metadata.get("source", "Unknown")
@@ -164,50 +192,84 @@ def ask_with_sources(rag_chain, retriever, question, max_retries=5):
             return answer
         except Exception as e:
             if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                wait = 30 + 60 * (2 ** attempt)  # 90s, 150s, 270s, 510s, 1050s
-                print(f"\n  Rate limit hit. Waiting {wait}s before retry ({attempt+1}/{max_retries})...")
-                time.sleep(wait)
+                if len(llm_keys) > 1:
+                    print(f"  Rate limit on key ...{key[-6:]} → rotating to next key (attempt {attempt+1})")
+                else:
+                    wait = 60 * (2 ** min(attempt, 4))
+                    print(f"  Rate limit hit (only 1 LLM key). Waiting {wait}s (attempt {attempt+1})...")
+                    time.sleep(wait)
             else:
                 print(f"\nError: {e}")
                 return None
 
-    print("Max retries reached. Skipping this question.")
+    print("All keys exhausted / max retries reached. Skipping this question.")
     return None
 
 
-def interactive_mode(rag_chain, retriever):
-    """
-    Run an interactive Q&A session in the terminal.
-    Type your questions and get answers in real time.
-    Type 'quit' or 'exit' to stop.
-    """
-    
+def batch_retrieve(questions, vectorstore, max_retries=None):
+    """Embed all questions in ONE batch call — rotates embed key on 429."""
+    max_retries = max_retries or len(embed_keys) * 3
+
+    print(f"\nBatch-embedding {len(questions)} queries in a single API call...")
+
+    for attempt in range(max_retries):
+        key = next_embed_key()
+        try:
+            query_vectors = make_embeddings(key).embed_documents(questions)
+            break
+        except Exception as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                if len(embed_keys) > 1:
+                    print(f"  Rate limit on embed key ...{key[-6:]} → rotating (attempt {attempt+1})")
+                else:
+                    wait = 60 * (2 ** min(attempt, 4))
+                    print(f"  Rate limit hit (only 1 embed key). Waiting {wait}s (attempt {attempt+1})...")
+                    time.sleep(wait)
+            else:
+                print(f"  Embedding error: {e}")
+                return [[] for _ in questions]
+    else:
+        print("  All embed keys exhausted. Returning empty results.")
+        return [[] for _ in questions]
+
+    all_docs = []
+    for vec in query_vectors:
+        docs = vectorstore.similarity_search_by_vector(vec, k=TOP_K)
+        all_docs.append(docs)
+
+    print(f"  Retrieved {TOP_K} chunks for each of {len(questions)} queries.")
+    return all_docs
+
+
+def interactive_mode(prompt, vectorstore):
+    """Interactive Q&A — rotates keys on rate limits."""
     print("\n" + "=" * 60)
     print("INTERACTIVE MODE — Ask anything about NIT Warangal!")
     print("=" * 60)
     print("Type your question and press Enter.")
     print("Type 'quit' or 'exit' to stop.\n")
-    
+
     while True:
         question = input("\nYou: ").strip()
-        
+
         if not question:
             continue
-        
+
         if question.lower() in ["quit", "exit", "q"]:
             print("Goodbye!")
             break
-        
+
         try:
-            ask_with_sources(rag_chain, retriever, question)
+            docs_list = batch_retrieve([question], vectorstore)
+            ask_with_sources(prompt, docs_list[0], question)
         except Exception as e:
             print(f"\nError: {e}")
             print("This might be a rate limit issue. Wait a few seconds and try again.")
 
 
-def run_test_queries(rag_chain, retriever):
-    """Run a set of pre-defined test queries to verify the RAG chain."""
-    
+def run_test_queries(prompt, vectorstore):
+    """Run pre-defined test queries — all queries embedded in ONE batch API call."""
+
     test_questions = [
         "What is the minimum attendance required to appear for end semester exams?",
         "Who is eligible for makeup examination?",
@@ -217,19 +279,18 @@ def run_test_queries(rag_chain, retriever):
         # This question should trigger "I don't know" since it's not in the docs
         "What is the hostel fee for 2024-25?",
     ]
-    
+
     print("\n" + "=" * 60)
     print("RUNNING TEST QUERIES")
     print("=" * 60)
-    
-    for i, question in enumerate(test_questions):
+
+    # Single batch embed call for all questions
+    all_docs = batch_retrieve(test_questions, vectorstore)
+
+    for question, retrieved_docs in zip(test_questions, all_docs):
         print("\n" + "=" * 60)
-        ask_with_sources(rag_chain, retriever, question)
+        ask_with_sources(prompt, retrieved_docs, question)
         print()
-        if i < len(test_questions) - 1:
-            wait = 30
-            print(f"Waiting {wait} seconds before next query...")
-            time.sleep(wait)
 
 
 def main():
@@ -242,11 +303,12 @@ def main():
     
     # Create RAG chain
     print(f"\nCreating RAG chain...")
-    print(f"  LLM: {LLM_MODEL} (temperature={LLM_TEMPERATURE})")
+    llm_model = LLM_MODEL_GROQ if LLM_PROVIDER == "groq" else LLM_MODEL_GOOGLE
+    print(f"  LLM: {llm_model} via {LLM_PROVIDER} (temperature={LLM_TEMPERATURE})")
     print(f"  Retrieval: top-{TOP_K} chunks per query")
-    rag_chain, retriever = create_rag_chain(vectorstore)
+    prompt, vectorstore = create_rag_chain(vectorstore)
     print("  RAG chain ready!\n")
-    
+
     # Ask user what to do
     print("Choose mode:")
     print("  1. Run test queries (automated)")
@@ -255,12 +317,12 @@ def main():
     choice = input("\nEnter 1 or 2: ").strip()
 
     if choice == "1":
-        run_test_queries(rag_chain, retriever)
+        run_test_queries(prompt, vectorstore)
     elif choice == "2":
-        interactive_mode(rag_chain, retriever)
+        interactive_mode(prompt, vectorstore)
     else:
         print("Invalid choice. Running test queries by default.")
-        run_test_queries(rag_chain, retriever)
+        run_test_queries(prompt, vectorstore)
     
 if __name__ == "__main__":
     main()
