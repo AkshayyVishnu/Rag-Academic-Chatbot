@@ -1,8 +1,11 @@
 
 import os
+import sys
 import json
 import time
 from dotenv import load_dotenv
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
@@ -139,9 +142,9 @@ def test_retrieval(vectorstore):
     ]
     
     for query in test_queries:
-        print(f"\n{'─' * 50}")
+        print(f"\n{'-' * 50}")
         print(f"QUERY: {query}")
-        print(f"{'─' * 50}")
+        print(f"{'-' * 50}")
         
         # Retrieve top 3 most similar chunks
         results = vectorstore.similarity_search_with_score(query, k=3)

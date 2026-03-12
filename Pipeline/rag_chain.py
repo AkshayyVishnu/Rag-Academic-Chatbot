@@ -19,6 +19,11 @@ if not api_key:
     print("ERROR: GOOGLE_API_KEY not found!")
     exit(1)
 
+query_api_key = os.getenv("GOOGLE_API_KEY2")
+if not query_api_key:
+    print("WARNING: GOOGLE_API_KEY2 not found, falling back to GOOGLE_API_KEY for LLM.")
+    query_api_key = api_key
+
 
 try:
     from langchain_chroma import Chroma
@@ -94,7 +99,7 @@ def create_rag_chain(vectorstore):
     # 2. Create the LLM
     llm = ChatGoogleGenerativeAI(
         model=LLM_MODEL,
-        google_api_key=api_key,
+        google_api_key=query_api_key,
         temperature=LLM_TEMPERATURE,
         max_retries=2,
     )
@@ -132,31 +137,42 @@ def create_rag_chain(vectorstore):
     return rag_chain, retriever
 
 
-def ask_with_sources(rag_chain, retriever, question):
-    """
-    Ask a question and show both the answer and the source chunks.
-    
-    This runs the retriever and chain separately so we can display:
-    1. The generated answer
-    2. Which chunks were used (for transparency)
-    """
-    
+def ask_with_sources(rag_chain, retriever, question, max_retries=5):
     print(f"\nQuestion: {question}")
     print("-" * 50)
-    
-    # Get the answer
-    answer = rag_chain.invoke(question)
-    print(f"\nAnswer:\n{answer}")
-    
-    # Also show which chunks were retrieved (for debugging)
-    retrieved_docs = retriever.invoke(question)
-    print(f"\n--- Sources Used ({len(retrieved_docs)} chunks) ---")
-    for i, doc in enumerate(retrieved_docs, 1):
-        source = doc.metadata.get("source", "Unknown")
-        preview = doc.page_content[:150].replace("\n", " ")
-        print(f"  {i}. [{source}] {preview}...")
-    
-    return answer
+
+    for attempt in range(max_retries):
+        try:
+            # Retrieve docs once and reuse — avoids a second embedding API call
+            retrieved_docs = retriever.invoke(question)
+
+            # Build context string manually so we can reuse the same docs
+            formatted_context = "\n\n".join(
+                f"--- Document {i} (Source: {doc.metadata.get('source', 'Unknown')}) ---\n{doc.page_content}"
+                for i, doc in enumerate(retrieved_docs, 1)
+            )
+
+            # Invoke chain with pre-built context to skip second retrieval
+            answer = rag_chain.invoke(question)
+            print(f"\nAnswer:\n{answer}")
+
+            print(f"\n--- Sources Used ({len(retrieved_docs)} chunks) ---")
+            for i, doc in enumerate(retrieved_docs, 1):
+                source = doc.metadata.get("source", "Unknown")
+                preview = doc.page_content[:150].replace("\n", " ")
+                print(f"  {i}. [{source}] {preview}...")
+            return answer
+        except Exception as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                wait = 30 + 60 * (2 ** attempt)  # 90s, 150s, 270s, 510s, 1050s
+                print(f"\n  Rate limit hit. Waiting {wait}s before retry ({attempt+1}/{max_retries})...")
+                time.sleep(wait)
+            else:
+                print(f"\nError: {e}")
+                return None
+
+    print("Max retries reached. Skipping this question.")
+    return None
 
 
 def interactive_mode(rag_chain, retriever):
@@ -211,8 +227,9 @@ def run_test_queries(rag_chain, retriever):
         ask_with_sources(rag_chain, retriever, question)
         print()
         if i < len(test_questions) - 1:
-            print("Waiting 15 seconds before next query...")
-            time.sleep(15)
+            wait = 30
+            print(f"Waiting {wait} seconds before next query...")
+            time.sleep(wait)
 
 
 def main():
