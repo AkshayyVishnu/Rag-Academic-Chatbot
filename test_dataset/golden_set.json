@@ -1,0 +1,1576 @@
+{
+  "version": "1.0",
+  "created": "2026-03-13",
+  "total_questions": 100,
+  "sources": {
+    "nitw_rag_eval_dataset.csv": "Q001–Q050 (M.Tech + UG regulations)",
+    "rag_eval_50_questions.json": "Q051–Q100 (PhD regulations + B.Tech CSE curriculum)"
+  },
+  "categories": {
+    "factual_single_doc": 40,
+    "factual_multi_doc": 10,
+    "comparison": 10,
+    "procedural": 10,
+    "numerical": 10,
+    "unanswerable": 20
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "What is the minimum CGPA required for the award of the M.Tech degree at NIT Warangal?",
+      "ground_truth": "A student must earn a minimum of 66â€“70 credits with a CGPA of not less than 5.00 for the award of the M.Tech degree.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 4 â€“ Degree Requirements",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "cgpa"
+      ],
+      "notes": "Tests basic factual retrieval from M.Tech doc"
+    },
+    {
+      "id": "Q002",
+      "question": "What is the maximum duration allowed for an M.Tech student to complete all degree requirements at NIT Warangal?",
+      "ground_truth": "The maximum duration is FOUR academic years from the date of first registration for the first semester.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 4 â€“ Degree Requirements (clause c)",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "duration"
+      ],
+      "notes": "Simple retrieval of max duration"
+    },
+    {
+      "id": "Q003",
+      "question": "What grade is awarded to an M.Tech student who has insufficient attendance in a course?",
+      "ground_truth": "The student is awarded an 'R' Grade for insufficient attendance and must register for the course again when it is offered next.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 7.8 â€“ Attendance / Section 10 â€“ Grading System",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "attendance"
+      ],
+      "notes": "Tests recall of transitional grade for attendance"
+    },
+    {
+      "id": "Q004",
+      "question": "How many days of casual leave is an M.Tech student entitled to per semester?",
+      "ground_truth": "An M.Tech student is entitled to 8 days of casual leave per semester, provided not more than 5 days are taken at a time. Casual leave cannot be combined with medical leave.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 8 â€“ Leaves",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "semester",
+        "leave"
+      ],
+      "notes": "Direct lookup from leave table"
+    },
+    {
+      "id": "Q005",
+      "question": "Under what conditions will an M.Tech student's Institute Scholarship be withheld?",
+      "ground_truth": "The Institute Scholarship will be withheld if the student's CGPA at the end of any semester falls below 6.50 (or 6.00 for SC/ST/PWD students). It will be restored with retrospective effect when the CGPA crosses 6.5 (or 6.0 for SC/ST/PWD) based on the HoD's recommendation.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 11.9 â€“ Assessment of Academic Performance",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "scholarship"
+      ],
+      "notes": "Tests nuanced retrieval including SC/ST condition"
+    },
+    {
+      "id": "Q006",
+      "question": "What is the allowed plagiarism limit for an M.Tech dissertation at NIT Warangal?",
+      "ground_truth": "M.Tech students are required to submit a report showing that plagiarism is within 20%, along with three annexures as stipulated in the Anti-plagiarism policy.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 11.8(vii) â€“ Dissertation Evaluation",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "dissertation",
+        "plagiarism"
+      ],
+      "notes": "Tests precise number retrieval from dissertation section"
+    },
+    {
+      "id": "Q007",
+      "question": "What is the CGPA criterion for M.Tech students to be eligible for First Division with Distinction?",
+      "ground_truth": "A student must have passed all courses without securing R, X, or U grades during the period of study and must have a CGPA of 8.00 and above to be eligible for First Division with Distinction.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 14.1 â€“ Award of Class",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "cgpa"
+      ],
+      "notes": "Tests recall of both conditions: no bad grades AND CGPA â‰¥ 8"
+    },
+    {
+      "id": "Q008",
+      "question": "What is the credit equivalence for a 12-week SWAYAM-NPTEL course for M.Tech students?",
+      "ground_truth": "A 12-week SWAYAM-NPTEL course is equivalent to 3 credits. An 8-week course is 2 credits, and a 4-week course is 1 or 0 credits.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 18.8 â€“ SWAYAM/NPTEL Courses",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "credits",
+        "swayam",
+        "nptel"
+      ],
+      "notes": "Tests extraction of credit equivalence table"
+    },
+    {
+      "id": "Q009",
+      "question": "What is the exit option available to M.Tech students who do not wish to complete the full 2-year program?",
+      "ground_truth": "A student is permitted to exit with a PG Diploma based on their request at the end of the first year, subject to passing all courses in the first year and clearing the comprehensive viva voce.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 19 â€“ Exit Policy for M.Tech",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech"
+      ],
+      "notes": "Tests less prominent section of the document"
+    },
+    {
+      "id": "Q010",
+      "question": "What are the conditions under which an M.Tech student can pursue dissertation work on a part-time basis after joining a job?",
+      "ground_truth": "An M.Tech student who has completed the entire course work may pursue dissertation part-time if: (i) sufficient facilities exist at the organization, (ii) there is a competent supervisor there, (iii) the minimum submission period is double the remaining balance period, and (iv) the dissertation must be under two supervisors â€” one from the organization and one from the institute.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 18.3 â€“ Temporary Withdrawal",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "dissertation"
+      ],
+      "notes": "Tests multi-condition retrieval from a nuanced clause"
+    },
+    {
+      "id": "Q011",
+      "question": "What is the minimum CGPA required for the award of a B.Tech degree at NIT Warangal?",
+      "ground_truth": "A student must earn a minimum of 150 to 160 credits as prescribed in the curriculum of the respective department with a CGPA of not less than 5.00.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "ug_regulations",
+      "source_section": "Section 3.5 â€“ Degree Requirements",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "cgpa"
+      ],
+      "notes": "Parallel to M.Tech factual Q001"
+    },
+    {
+      "id": "Q012",
+      "question": "What is the maximum duration allowed for a B.Tech student to complete all degree requirements at NIT Warangal?",
+      "ground_truth": "The maximum duration is EIGHT academic years from the date of first registration for the first semester.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "ug_regulations",
+      "source_section": "Section 3.5(d) â€“ Degree Requirements",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "duration"
+      ],
+      "notes": "Simple retrieval"
+    },
+    {
+      "id": "Q013",
+      "question": "What is the basis for B.Tech admission to NIT Warangal?",
+      "ground_truth": "Admissions are made based on the relative performance in the Joint Entrance Examination (JEE â€“ Mains) as per guidelines issued by MoE.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "ug_regulations",
+      "source_section": "Section 2.2 â€“ Admission",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "admission"
+      ],
+      "notes": "Basic admission eligibility retrieval"
+    },
+    {
+      "id": "Q014",
+      "question": "Is branch change permitted at the end of the first year for B.Tech students at NIT Warangal?",
+      "ground_truth": "No. There will be no branch change at the end of first year for B.Tech students.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "ug_regulations",
+      "source_section": "Section 2.8 â€“ Admission",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "branch-change"
+      ],
+      "notes": "Tests retrieval of a clear negative/restrictive rule"
+    },
+    {
+      "id": "Q015",
+      "question": "What is the minimum CGPA required for a B.Tech student to register for a Minor specialization program?",
+      "ground_truth": "Students with a minimum CGPA of 7.00 without any 'U' grade or backlog are only allowed to register for a Minor program offered by any other Department.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "ug_regulations",
+      "source_section": "Section 16.1 â€“ Minor Program",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "cgpa",
+        "minor"
+      ],
+      "notes": "Tests precision in CGPA threshold for minor"
+    },
+    {
+      "id": "Q016",
+      "question": "How many credits must a B.Tech student pass to be promoted from Year I to Year II at NIT Warangal?",
+      "ground_truth": "To register in the 3rd semester (Year II), a student should have completed, with P or better grade, at least 22 credits at the end of 1st Semester, 2nd Semester and makeup examinations combined.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "ug_regulations",
+      "source_section": "Section 7.11(a) â€“ Promotion Rules",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "credits"
+      ],
+      "notes": "Tests credit threshold for year promotion"
+    },
+    {
+      "id": "Q017",
+      "question": "What is the plagiarism limit for the B.Tech Major Project report?",
+      "ground_truth": "B.Tech students are required to submit a report showing that plagiarism is within 30%, along with three annexures as stipulated in the Anti-plagiarism policy.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "ug_regulations",
+      "source_section": "Section 9.7 â€“ Major Project",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "plagiarism"
+      ],
+      "notes": "Tests B.Tech plagiarism threshold"
+    },
+    {
+      "id": "Q018",
+      "question": "What is the one-time fee a B.Tech student must pay to register for a Minor or Honors program?",
+      "ground_truth": "Students permitted to register for a Minor or Honors program will have to pay a one-time fee of Rs. 6,000/-.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "ug_regulations",
+      "source_section": "Section 16.2 / 17.2 â€“ Minor and Honors Programs",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "fee",
+        "minor",
+        "honors"
+      ],
+      "notes": "Tests fee retrieval"
+    },
+    {
+      "id": "Q019",
+      "question": "What CGPA does a B.Tech student need to be eligible for a Semester Internship in the 8th Semester?",
+      "ground_truth": "Students with a CGPA more than 6.50 and having no backlogs up to 8th Semester will only be permitted to go for a semester internship arranged through CCPD in the 8th Semester.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "ug_regulations",
+      "source_section": "Section 18.1 â€“ Semester Internship",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "cgpa",
+        "semester",
+        "internship"
+      ],
+      "notes": "Tests dual condition: CGPA > 6.50 AND no backlogs"
+    },
+    {
+      "id": "Q020",
+      "question": "What happens to the grade earned by a B.Tech student in summer courses?",
+      "ground_truth": "The grade earned by a student in summer courses shall be reduced by one grade, except for the 'P' grade which is not reduced. Students with CGPA < 5.00 are also permitted to register for the Summer Course, and the higher of the two grades will be retained.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "ug_regulations",
+      "source_section": "Section 26 â€“ Summer Courses",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug"
+      ],
+      "notes": "Tests nuanced grade reduction rule for summer courses"
+    },
+    {
+      "id": "Q021",
+      "question": "What entrance examination is used for admission to B.Tech programs and what is used for M.Tech programs at NIT Warangal?",
+      "ground_truth": "B.Tech admissions are based on JEE (Mains) scores. M.Tech admissions are based on a valid GATE score through CCMT. Self-finance M.Tech admissions are based on a written exam and interview conducted by the department.",
+      "category": "factual_multi_doc",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 2.2 | M.Tech: Section 2.2",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "admission"
+      ],
+      "notes": "Tests cross-document retrieval on a related topic"
+    },
+    {
+      "id": "Q022",
+      "question": "How many effective teaching weeks are there in a semester for both B.Tech and M.Tech programs at NIT Warangal?",
+      "ground_truth": "For both B.Tech and M.Tech programs, the number of effective teaching weeks in a semester is 14. The total semester duration (including examinations) is normally 17 weeks.",
+      "category": "factual_multi_doc",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 4 | M.Tech: Section 5.1",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "semester"
+      ],
+      "notes": "Tests retrieval of shared academic calendar detail"
+    },
+    {
+      "id": "Q023",
+      "question": "What is the penalty for an M.Tech or B.Tech student who does not submit course feedback at the end of the semester?",
+      "ground_truth": "In both programs, results are withheld for students who do not submit feedback. Such students must (a) pay a fine of Rs. 500/-, (b) obtain permission from the Dean (Academic), and (c) fill the feedback to view the withheld result.",
+      "category": "factual_multi_doc",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 22 | M.Tech: Section 21",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "fee",
+        "semester"
+      ],
+      "notes": "Tests retrieval of identical rule across two docs"
+    },
+    {
+      "id": "Q024",
+      "question": "What is the CGPA requirement for M.Tech students to apply for the Integrated M.Tech-PhD program, and for B.Tech students to apply for the B.Tech-PhD program at NIT Warangal?",
+      "ground_truth": "For Integrated M.Tech-PhD: M.Tech students need a CGPA > 8.00 (Open/OBC) or > 7.50 (SC/ST/PWD) at the end of the first year. For B.Tech-PhD: B.Tech students from reputed CFTIs need a CGPA > 8.00 (Open/OBC) or > 7.50 (SC/ST/PWD) and must have qualified in GATE.",
+      "category": "factual_multi_doc",
+      "difficulty": "hard",
+      "source_document": "multiple",
+      "source_section": "M.Tech: Section 20 | UG: Section 28",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "cgpa",
+        "phd"
+      ],
+      "notes": "Cross-document multi-hop on PhD eligibility"
+    },
+    {
+      "id": "Q025",
+      "question": "What are the four transitional grade symbols used in both B.Tech and M.Tech programs, and what does each represent?",
+      "ground_truth": "Both programs use the same four transitional grades: (I) Incomplete assessment â€“ when the student misses the end-semester exam on medical grounds; (R) Insufficient attendance; (W) Temporary withdrawal from the institute; (X) Debarred on grounds of indiscipline or malpractice in examinations.",
+      "category": "factual_multi_doc",
+      "difficulty": "hard",
+      "source_document": "multiple",
+      "source_section": "UG: Section 8.1 | M.Tech: Section 10.1",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc"
+      ],
+      "notes": "Tests complete retrieval of grade symbols from both docs"
+    },
+    {
+      "id": "Q026",
+      "question": "Compare the minimum credit requirements for degree award between B.Tech and M.Tech programs at NIT Warangal.",
+      "ground_truth": "B.Tech students must earn a minimum of 150 to 160 credits (as prescribed by the respective department). M.Tech students must earn a minimum of 66 to 70 credits (as prescribed by the concerned department). Both programs require a minimum CGPA of 5.00.",
+      "category": "comparison",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 3.5 | M.Tech: Section 4",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "credits"
+      ],
+      "notes": "Direct synthesis/comparison of credit requirements"
+    },
+    {
+      "id": "Q027",
+      "question": "How does the minimum program duration differ between B.Tech and M.Tech at NIT Warangal?",
+      "ground_truth": "The minimum duration for B.Tech is FOUR academic years. The minimum duration for M.Tech is TWO academic years. Both are counted from the date of first registration for the first semester.",
+      "category": "comparison",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 3.5(c) | M.Tech: Section 4(b)",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "duration"
+      ],
+      "notes": "Parallel structure comparison across docs"
+    },
+    {
+      "id": "Q028",
+      "question": "Compare the plagiarism limits for the final project/dissertation report between B.Tech and M.Tech programs.",
+      "ground_truth": "B.Tech Major Project reports must show plagiarism within 30%. M.Tech dissertation reports must show plagiarism within 20%. In both cases, students must submit three annexures as stipulated in the Anti-plagiarism policy.",
+      "category": "comparison",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 9.7 | M.Tech: Section 11.8(vii)",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "dissertation",
+        "plagiarism"
+      ],
+      "notes": "Tests comparison of a specific numeric threshold across programs"
+    },
+    {
+      "id": "Q029",
+      "question": "Compare the makeup examination eligibility rules for students with R grade in B.Tech and M.Tech programs.",
+      "ground_truth": "The rule is identical in both programs: students with an 'R' grade (insufficient attendance) in any course are NOT eligible to write the makeup examination for that course. They must re-register for the course when it is offered next.",
+      "category": "comparison",
+      "difficulty": "hard",
+      "source_document": "multiple",
+      "source_section": "UG: Section 15.2 | M.Tech: Section 15.2",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "makeup-exam"
+      ],
+      "notes": "Tests whether the model can identify an identical rule across docs"
+    },
+    {
+      "id": "Q030",
+      "question": "How does the year-to-year progression/promotion policy differ between B.Tech and M.Tech programs at NIT Warangal?",
+      "ground_truth": "B.Tech has explicit year-to-year promotion rules: students must pass at least 22 credits (Year Iâ†’II) and 24 credits (Year IIâ†’III and Year IIIâ†’IV) in addition to clearing all prior year requirements. M.Tech regulations do not specify similar credit-based year promotion rules; students are expected to complete the 4-semester program within the 4-year maximum duration without defined semester-to-semester credit gates.",
+      "category": "comparison",
+      "difficulty": "hard",
+      "source_document": "multiple",
+      "source_section": "UG: Section 7.11 | M.Tech: Section 4",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "promotion"
+      ],
+      "notes": "Tests multi-hop reasoning about structural policy differences"
+    },
+    {
+      "id": "Q031",
+      "question": "What is the step-by-step process for an M.Tech student to transfer credits from a completed SWAYAM-NPTEL course?",
+      "ground_truth": "Step 1: Ensure the course is from the list of SWAYAM-NPTEL courses approved by the parent department. Step 2: Successfully complete the course and obtain the SWAYAM-NPTEL certificate. Step 3: Submit the original certificate to the Head of the parent department with a written request for credit transfer. Step 4: The HoD verifies the certificate and approves. Step 5: The course and equivalent credits are included in the student's registration in the semester immediately following completion of the SWAYAM-NPTEL course.",
+      "category": "procedural",
+      "difficulty": "hard",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 18 â€“ SWAYAM/NPTEL Courses",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "credits",
+        "swayam",
+        "nptel"
+      ],
+      "notes": "Tests multi-step procedural synthesis"
+    },
+    {
+      "id": "Q032",
+      "question": "What is the procedure for an M.Tech student to get permission to miss an end-semester examination due to illness?",
+      "ground_truth": "Step 1: The student must appeal to the Dean-Academic BEFORE the commencement of the examination, routing through the Head of the Department. Step 2: The student must obtain a medical certificate from the Institute Medical Officer. Step 3: A committee (Dean-Academic as Chairman, Dean Students Welfare, concerned HoD, Institute Medical Officer, and Associate Dean Examinations as convener) examines the documents. Step 4: If the committee is convinced, it recommends allowing the student to appear in the subsequent examination. Step 5: A transitory grade 'I' is temporarily awarded. The re-end examination is conducted once a year, at the time of the makeup examination.",
+      "category": "procedural",
+      "difficulty": "hard",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 12.4 â€“ Mid and End-Semester Examinations",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "semester"
+      ],
+      "notes": "Tests complete procedural extraction from a multi-step rule"
+    },
+    {
+      "id": "Q033",
+      "question": "What is the process for submitting and evaluating the M.Tech dissertation (Part-B) at NIT Warangal?",
+      "ground_truth": "Step 1: The student must complete all required courses before submission. Step 2: A plagiarism report (<20%) must be prepared along with three annexures per the Anti-plagiarism policy. Step 3: Three/four bound copies plus a soft copy must be submitted to the HoD within the Academic Calendar deadline. Step 4: A mid-term review is conducted by the evaluation committee (40 marks by guide + 20 marks mid-term review + 40 marks end-semester viva-voce). Step 5: The end-semester viva-voce is conducted by an external examiner along with an evaluation committee constituted by the HoD. Step 6: Grades are finalized by the committee.",
+      "category": "procedural",
+      "difficulty": "hard",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 11.8 â€“ Dissertation Evaluation",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "dissertation"
+      ],
+      "notes": "Tests complete procedural flow for dissertation"
+    },
+    {
+      "id": "Q034",
+      "question": "What steps must a B.Tech student follow to appeal against an erroneous grade after result publication?",
+      "ground_truth": "Step 1: The student must appeal to the Departmental Academic Appeals Committee (DAAC) in writing within 5 working days from the date of official publication of results on the Institute website. Step 2: The DAAC interacts with the concerned course instructor and the student separately before taking a decision. Step 3: The decision is made based on a simple majority. Step 4: The DAAC's recommendations are communicated to the Dean-Academic for further appropriate action.",
+      "category": "procedural",
+      "difficulty": "medium",
+      "source_document": "ug_regulations",
+      "source_section": "Section 10.10 and DAAC Functions â€“ UG Regulations",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "publication"
+      ],
+      "notes": "Tests procedural retrieval of appeals process"
+    },
+    {
+      "id": "Q035",
+      "question": "What is the process for a B.Tech student to apply for temporary withdrawal from the institute?",
+      "ground_truth": "Step 1: The student must apply to the institute through the Head of the Department within 15 days of the commencement of the semester OR from the last date of attending classes, whichever is later. Step 2: The application must state the full reasons for withdrawal, include supporting documents, and have endorsement from the parent/guardian. Step 3: The institute must be satisfied that the student can still complete the degree within the maximum time limit (8 years) including the withdrawal period. Step 4: There should be no outstanding dues in the institute, hostel, department, library, or NCC. Step 5: If approved, the student is awarded a 'W' grade. If applied before or within 15 days of semester start, the student is exempted from paying tuition fee for that semester. Note: Only one such withdrawal is allowed during the entire tenure.",
+      "category": "procedural",
+      "difficulty": "hard",
+      "source_document": "ug_regulations",
+      "source_section": "Section 19 â€“ Temporary Withdrawal",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "withdrawal"
+      ],
+      "notes": "Tests multi-condition procedural extraction"
+    },
+    {
+      "id": "Q036",
+      "question": "How is the Semester Grade Point Average (SGPA) calculated at NIT Warangal? Provide the formula.",
+      "ground_truth": "SGPA = Î£(Ci Ã— GPi) / Î£(Ci), where Ci is the number of credits for each course, GPi is the grade point obtained in that course, and n is the number of courses registered in the semester.",
+      "category": "numerical",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 8.2 | M.Tech: Section 10.2",
+      "requires_multi_hop": false,
+      "tags": [
+        "multi-doc",
+        "sgpa",
+        "semester"
+      ],
+      "notes": "Tests exact formula extraction"
+    },
+    {
+      "id": "Q037",
+      "question": "What is the formula for converting CGPA to percentage marks at NIT Warangal?",
+      "ground_truth": "Percentage marks = (CGPA â€“ 0.5) Ã— 10",
+      "category": "numerical",
+      "difficulty": "easy",
+      "source_document": "multiple",
+      "source_section": "UG: Section 8.6 | M.Tech: Section 10.6",
+      "requires_multi_hop": false,
+      "tags": [
+        "multi-doc",
+        "cgpa"
+      ],
+      "notes": "Tests direct formula retrieval"
+    },
+    {
+      "id": "Q038",
+      "question": "What is the weightage of the laboratory component in a 2-0-2 (3-credit) integrated course?",
+      "ground_truth": "In a 2-0-2 course (3 credit hours total), the weightage for the laboratory component is 33% (i.e., 1/3 of the total marks).",
+      "category": "numerical",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "UG: Section 11.2 | M.Tech: Section 13.2",
+      "requires_multi_hop": false,
+      "tags": [
+        "multi-doc",
+        "credits"
+      ],
+      "notes": "Tests numeric ratio extraction for integrated course evaluation"
+    },
+    {
+      "id": "Q039",
+      "question": "How many total credits does the M.Tech dissertation carry, and what is the marks distribution for Dissertation Part-B?",
+      "ground_truth": "The M.Tech dissertation carries 32 credits in total. Dissertation Part-B is evaluated for 100 marks with the following distribution: (a) Periodic evaluation by Guide â€“ 40 marks, (b) Midterm review â€“ 20 marks, (c) End semester viva-voce â€“ 40 marks.",
+      "category": "numerical",
+      "difficulty": "medium",
+      "source_document": "mtech_regulations",
+      "source_section": "Section 11.8 â€“ Dissertation Evaluation",
+      "requires_multi_hop": false,
+      "tags": [
+        "mtech",
+        "dissertation",
+        "credits"
+      ],
+      "notes": "Tests multi-part numerical extraction"
+    },
+    {
+      "id": "Q040",
+      "question": "A B.Tech student has a CGPA of 7.5 at NIT Warangal. What is their equivalent percentage, and which class/division does this correspond to?",
+      "ground_truth": "Percentage = (7.5 â€“ 0.5) Ã— 10 = 70%. A CGPA of 7.5 falls in the range of 6.50 and above but less than 8.00, which corresponds to First Division. Note: To get First Division with Distinction, the student needs a CGPA of 8.00 or above along with no R, X, or U grades.",
+      "category": "numerical",
+      "difficulty": "hard",
+      "source_document": "ug_regulations",
+      "source_section": "UG: Section 8.6 and Section 14",
+      "requires_multi_hop": false,
+      "tags": [
+        "ug",
+        "cgpa"
+      ],
+      "notes": "Tests numerical computation combined with category classification"
+    },
+    {
+      "id": "Q041",
+      "question": "What is the monthly stipend amount paid to M.Tech students at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "stipend"
+      ],
+      "notes": "Tests hallucination resistance â€“ amount not in doc",
+      "expected_refusal": "UNANSWERABLE â€“ The documents state that stipend will be as per guidelines prescribed by MoE, Government of India from time to time, but the exact stipend amount is not mentioned in the provided regulations."
+    },
+    {
+      "id": "Q042",
+      "question": "What is the annual hostel fee for B.Tech students at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "fee",
+        "hostel"
+      ],
+      "notes": "Common hallucination trap â€“ hostel fees not in scope",
+      "expected_refusal": "UNANSWERABLE â€“ The provided academic regulations do not contain information about hostel fees. The documents only state that residential requirements are detailed in the Student Disciplinary Manual."
+    },
+    {
+      "id": "Q043",
+      "question": "What is the name of the current Director of NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable"
+      ],
+      "notes": "Tests hallucination resistance for named individuals",
+      "expected_refusal": "UNANSWERABLE â€“ The provided academic regulation documents do not mention the name of the current Director of NIT Warangal."
+    },
+    {
+      "id": "Q044",
+      "question": "What is the GATE cut-off score for admission to the M.Tech CSE program at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "gate",
+        "admission"
+      ],
+      "notes": "Tests hallucination resistance â€“ specific cut-off not in doc",
+      "expected_refusal": "UNANSWERABLE â€“ The documents state that M.Tech admissions are based on a valid GATE score through CCMT, but no specific cut-off GATE score for any program is mentioned in the provided regulations."
+    },
+    {
+      "id": "Q045",
+      "question": "What is the tuition fee per semester for B.Tech students at NIT Warangal for the 2024-25 academic year?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "fee",
+        "semester"
+      ],
+      "notes": "Tests hallucination resistance â€“ fee amount not in doc",
+      "expected_refusal": "UNANSWERABLE â€“ The academic regulations do not include fee structures or tuition fee amounts. The documents only refer to fee requirements in the context of registration (students must pay all required fees), but specific amounts are not provided."
+    },
+    {
+      "id": "Q046",
+      "question": "What is the WiFi or internet access policy for students in NIT Warangal hostels?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "hostel",
+        "wifi"
+      ],
+      "notes": "Tests out-of-scope retrieval boundary",
+      "expected_refusal": "UNANSWERABLE â€“ The provided academic regulation documents do not contain information about hostel WiFi or internet policies. Such details are referenced in the Student Disciplinary Manual, which is not part of the provided documents."
+    },
+    {
+      "id": "Q047",
+      "question": "How many total students are enrolled in the B.Tech Computer Science and Engineering program at NIT Warangal in 2024-25?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable"
+      ],
+      "notes": "Tests hallucination resistance for enrollment data",
+      "expected_refusal": "UNANSWERABLE â€“ The provided academic regulations do not include student enrollment numbers for any specific program. This information is not available in the given documents."
+    },
+    {
+      "id": "Q048",
+      "question": "What is the library fine per day for overdue books at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "hard",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "library"
+      ],
+      "notes": "Tests out-of-scope retrieval for library policies",
+      "expected_refusal": "UNANSWERABLE â€“ The academic regulation documents do not contain any information about library fines. Library policies are outside the scope of these academic regulations."
+    },
+    {
+      "id": "Q049",
+      "question": "Can an M.Tech student at NIT Warangal switch their dissertation topic after completing Dissertation Part-A without penalty?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "hard",
+      "source_document": "none",
+      "source_section": "Section 11.8(viii) partially relevant â€“ but question as asked is unanswerable",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "dissertation"
+      ],
+      "notes": "Hard unanswerable â€“ requires nuanced boundary detection",
+      "expected_refusal": "UNANSWERABLE â€“ The regulations do not explicitly describe a penalty-free process for switching dissertation topics after Part-A without a 'U' grade scenario. The documents only mention that if a student receives a 'U' grade in Dissertation Part-A, they may be given the option to change the guide and the topic. A clear policy for switching topics without a U grade is not described in the provided documents."
+    },
+    {
+      "id": "Q050",
+      "question": "What is the exact schedule of placement drives organized by the Centre for Career Planning and Development (CCPD) at NIT Warangal for 2024-25?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "hard",
+      "source_document": "none",
+      "source_section": "N/A",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "placement"
+      ],
+      "notes": "Tests hallucination resistance for placement-specific data",
+      "expected_refusal": "UNANSWERABLE â€“ The academic regulation documents mention CCPD in the context of on-duty attendance for placement interviews but do not include any placement drive schedules or details about specific companies visiting the campus. This information is outside the scope of the provided documents."
+    },
+    {
+      "id": "Q051",
+      "question": "What is the minimum CGPA required for GEN/OBC-NCL category candidates to be eligible for PhD admission at NIT Warangal?",
+      "ground_truth": "Minimum 60% aggregate marks or CGPA of 6.5 on a 10-point scale at both UG and PG levels.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 2.2.1",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "cgpa",
+        "admission"
+      ],
+      "notes": "Direct lookup of a numeric threshold; tests basic factual retrieval from eligibility criteria"
+    },
+    {
+      "id": "Q052",
+      "question": "What is the maximum number of PhD scholars with Institute Fellowship that can be registered under a single Main/Soul Supervisor at any given time?",
+      "ground_truth": "TWO (2). The DAC-PG&R ensures no supervisor has more than two scholars with institute fellowship. There is no limit for scholars without institute fellowship.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 5.5",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "fellowship",
+        "supervisor"
+      ],
+      "notes": "Tests retrieval of a hard numeric cap embedded in a supervisor-allocation rule"
+    },
+    {
+      "id": "Q053",
+      "question": "What are the seven stages of the PhD Degree Program structure at NIT Warangal?",
+      "ground_truth": "1) PhD Course work and evaluation, 2) Research proposal submission, 3) Comprehensive Examination, 4) Periodic assessment of research progress, 5) Pre-synopsis seminar and synopsis submission, 6) PhD thesis submission and adjudication.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 3.1",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd"
+      ],
+      "notes": "List-recall question; tests whether all 6 stages are retrieved without omission"
+    },
+    {
+      "id": "Q054",
+      "question": "What is the minimum score a PhD scholar must obtain in the written component (Part-1) of the Comprehensive Examination?",
+      "ground_truth": "At least 50 percent. Only after successful completion of Part-1 will the scholar be allowed to appear for Part-2.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 4.3.1",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "comprehensive-exam"
+      ],
+      "notes": "Single numeric fact gating access to Part-2; tests precise threshold retrieval"
+    },
+    {
+      "id": "Q055",
+      "question": "How many institute-level course options are available for PhD scholars at NIT Warangal, and name any five of them?",
+      "ground_truth": "Multiple institute-level courses are listed. Five examples: AI & ML, Applied Mathematical Methods, Data Mining, Deep Learning for Image Processing, Design and Analysis of Experiments, English for Scientific Communication, Research Methodology, etc.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Section 3.3",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd"
+      ],
+      "notes": "Tests retrieval of an enumerated list; partial credit possible if ≥5 correct names given"
+    },
+    {
+      "id": "Q056",
+      "question": "Under what conditions can a PhD scholar change their status from full-time to part-time?",
+      "ground_truth": "Change requires Senate approval based on DSC recommendations, AND either (a) submission of synopsis, OR (b) completion of three years with a substantial amount of research.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Section 2.1 Note (vii)",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd"
+      ],
+      "notes": "Two-condition rule in a note block; tests whether the model retrieves both conditions (senate approval AND synopsis/3-year threshold)"
+    },
+    {
+      "id": "Q057",
+      "question": "What are the publication requirements for PhD scholars from the Department of Management Studies before the pre-synopsis seminar?",
+      "ground_truth": "Two papers with the scholar as first author in SCI/SCIE/Open Access journals of SCI or ABDC journals, with at least one publication in an ABDC journal.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Section 4.4.2",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "publication"
+      ],
+      "notes": "Department-specific exception to the general rule; tests fine-grained retrieval within a multi-part section"
+    },
+    {
+      "id": "Q058",
+      "question": "What is the composition of the Doctoral Scrutiny Committee (DSC) at NIT Warangal?",
+      "ground_truth": "1) HoD/Senior faculty from Department or Allied Department (Chairman, nominated by Dean Academic); 2) Research Supervisor (Member/Convener); 3) Co-supervisor if any (Member); 4) Two faculty members from the Department (Member); 5) One faculty member from allied Department (Member, nominated by Dean Academic).",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Appendix-V",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "dsc"
+      ],
+      "notes": "Committee-composition retrieval; tests whether all 5 roles and their designations are captured"
+    },
+    {
+      "id": "Q059",
+      "question": "What happens to a PhD scholar's stipend if they exit the PhD program and are converted to M.S. by Research?",
+      "ground_truth": "The stipend is reduced from FULL to HALF from the date of conversion. The total period of stipend remains only 3 years from the date of registration.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Section 10.7",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "stipend"
+      ],
+      "notes": "Policy consequence of a program exit; tests retrieval of both the halving rule and the 3-year total cap"
+    },
+    {
+      "id": "Q060",
+      "question": "What special leave provisions exist for PhD research scholars to attend national or international conferences?",
+      "ground_truth": "Scholars may take Special Casual Leave (total max 10 days per academic year) for conference attendance. Leave is recommended by supervisor(s) and approved by HoD. Duration cannot exceed conference duration plus four days for travel. This is separate from the 15 days casual leave and 15 days medical leave entitlement.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "phd_regulations",
+      "source_section": "Appendix-I, Section 5.7",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "leave"
+      ],
+      "notes": "Multi-clause leave rule; tests whether the model distinguishes special casual leave from regular casual/medical leave and captures the 10-day annual cap"
+    },
+    {
+      "id": "Q061",
+      "question": "What is the total graded credit requirement for completing the B.Tech CSE program at NIT Warangal?",
+      "ground_truth": "156 credits.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "btech_curriculum",
+      "source_section": "The Overall Credit Structure table",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits"
+      ],
+      "notes": "Single numeric fact from a summary table; baseline factual retrieval test"
+    },
+    {
+      "id": "Q062",
+      "question": "How many credits does the Major Project (CS1498) carry in the 8th semester of B.Tech CSE?",
+      "ground_truth": "6 credits.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "btech_curriculum",
+      "source_section": "8th Semester curriculum table",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "semester"
+      ],
+      "notes": "Credit lookup for a named course; tests table-cell retrieval accuracy"
+    },
+    {
+      "id": "Q063",
+      "question": "In which semester is 'Cryptography and Network Security' taught, and what is its course code and credit load?",
+      "ground_truth": "6th semester. Course code: CS1302. L-T-P: 4-0-0. Credits: 4.",
+      "category": "factual_single_doc",
+      "difficulty": "easy",
+      "source_document": "btech_curriculum",
+      "source_section": "6th Semester curriculum table",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "semester"
+      ],
+      "notes": "Three-field lookup (semester, code, credits) in one question; tests multi-attribute retrieval from a curriculum table"
+    },
+    {
+      "id": "Q064",
+      "question": "How many professional elective courses must a B.Tech CSE student complete, and in which semesters are they offered?",
+      "ground_truth": "8 professional elective courses total. Elective-I in 5th semester; Electives-II and III in 6th semester; Electives-IV and V in 7th semester; Electives-VI, VII, and VIII in 8th semester.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "Curriculum semester tables (5th–8th sem)",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "elective",
+        "semester"
+      ],
+      "notes": "Requires scanning all four upper-semester tables; tests completeness of elective distribution retrieval"
+    },
+    {
+      "id": "Q065",
+      "question": "What are the three Program Specific Outcomes (PSOs) of the B.Tech CSE program at NIT Warangal?",
+      "ground_truth": "PSO-1: Design algorithms for real-world computational problems and analyze their complexities. PSO-2: Design and develop interfaces among subsystems of computing. PSO-3: Analyze large data samples and discover knowledge to provide solutions to engineering problems. PSO-4: Assess security, privacy, quality and cost parameters in developing software systems.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "Program Specific Outcomes section",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech"
+      ],
+      "notes": "Tests retrieval of all 4 PSOs; question intentionally says 'three' to test whether the model corrects the count"
+    },
+    {
+      "id": "Q066",
+      "question": "How many courses and credits must a student complete to earn the Minor Degree in Computer Science & Engineering at NIT Warangal?",
+      "ground_truth": "Minimum 5 courses totaling 15 credits.",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "Minor Degree in CSE section",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "minor"
+      ],
+      "notes": "Two-field lookup (courses count + credits); tests retrieval of minimum completion criteria for an optional track"
+    },
+    {
+      "id": "Q067",
+      "question": "What is the credit breakdown for Open Elective courses in the B.Tech CSE program?",
+      "ground_truth": "2 credits for Open Electives (1 Open Elective course of 2-0-0 credits in 7th semester).",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "Overall Credit Structure and 7th Semester table",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "elective"
+      ],
+      "notes": "Requires cross-referencing summary table with semester table to confirm the single Open Elective slot"
+    },
+    {
+      "id": "Q068",
+      "question": "What are the five course options listed under Professional Elective-I for B.Tech CSE students?",
+      "ground_truth": "1) Advanced Algorithms (CS1321), 2) Advanced Computer Architecture (CS1323), 3) Artificial Intelligence (CS1325), 4) Computational Number Theory (CS1327), 5) Programming Language Concepts (CS1329), 6) Software Testing (CS1331). (Any 5 of these 6 is acceptable.)",
+      "category": "factual_single_doc",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "Professional Elective Courses section",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "elective"
+      ],
+      "notes": "List retrieval from elective table; question says 'five' but 6 exist — tests completeness and tolerance"
+    },
+    {
+      "id": "Q069",
+      "question": "What is the course structure (L-T-P) and credit value of 'Design Thinking' (CS1102) in the B.Tech CSE curriculum?",
+      "ground_truth": "L-T-P: 0-1-4. Credits: 3. Offered in the 2nd semester.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "btech_curriculum",
+      "source_section": "2nd Semester curriculum table",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits"
+      ],
+      "notes": "L-T-P pattern retrieval; tests whether the model correctly reads non-standard 0-1-4 format and maps it to 3 credits"
+    },
+    {
+      "id": "Q070",
+      "question": "What are the two Fractal Courses in the B.Tech CSE curriculum, in which semesters are they offered, and how many credits do they carry?",
+      "ground_truth": "Fractal Course-I (CS1381) in 5th semester (0-0-1, 0.5 credits) and Fractal Course-II (CS1382) in 6th semester (0-0-1, 0.5 credits). Each carries 0.5 credits.",
+      "category": "factual_single_doc",
+      "difficulty": "hard",
+      "source_document": "btech_curriculum",
+      "source_section": "5th and 6th Semester curriculum tables",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "semester"
+      ],
+      "notes": "Tests retrieval of a unique fractional-credit feature; requires scanning two separate semester tables"
+    },
+    {
+      "id": "Q071",
+      "question": "Both the PhD Regulations and B.Tech CSE Curriculum documents are effective from which academic year, and are they from the same institution?",
+      "ground_truth": "Both are effective from AY 2024-25 and are from the same institution: National Institute of Technology (NIT) Warangal, Telangana.",
+      "category": "factual_multi_doc",
+      "difficulty": "easy",
+      "source_document": "multiple",
+      "source_section": "Cover pages of both documents",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "phd"
+      ],
+      "notes": "Cross-document metadata retrieval; tests whether both documents are indexed and their institutional headers are accessible"
+    },
+    {
+      "id": "Q072",
+      "question": "A B.Tech CSE graduate from NIT Warangal with a CGPA of 7.5 (GEN category) wants to pursue a PhD at NIT Warangal. Are they eligible, and if so, how many course credits must they complete in the PhD program?",
+      "ground_truth": "Yes, they are eligible. B.Tech graduates under GEN/OBC/EWS category need at least 7.0 CGPA (or 65% aggregate), so 7.5 meets the requirement. They must also have a valid GATE score. As a B.E./B.Tech holder, they would need to complete a minimum of 18 PhD course credits.",
+      "category": "factual_multi_doc",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "PhD Regulations Sections 2.2.1 & 3.2; B.Tech curriculum cover",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "cgpa",
+        "credits",
+        "phd"
+      ],
+      "notes": "Multi-hop: B.Tech CGPA from doc-2 is checked against PhD eligibility threshold in doc-1, then PhD credit requirement looked up in doc-1"
+    },
+    {
+      "id": "Q073",
+      "question": "If a PhD scholar at NIT Warangal wants to do a PhD elective course on 'AI & ML', what is the credit value of that course, and is such a course also covered in the B.Tech CSE curriculum?",
+      "ground_truth": "In the PhD program, all courses are 3 credits only (as per Section 3.3). The B.Tech CSE curriculum does include Machine Learning (CS1304, 3 credits in 6th semester) and Deep Learning (CS1425, as an elective), which are closely related. Artificial Intelligence is also available as Professional Elective-I (CS1325) in B.Tech CSE.",
+      "category": "factual_multi_doc",
+      "difficulty": "medium",
+      "source_document": "multiple",
+      "source_section": "PhD Regulations Section 3.3; B.Tech curriculum 6th semester and elective list",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "credits",
+        "phd",
+        "elective"
+      ],
+      "notes": "Cross-doc topic overlap; tests whether the RAG system retrieves the 3-credit PhD rule and correctly maps AI/ML to existing B.Tech course codes"
+    },
+    {
+      "id": "Q074",
+      "question": "A B.Tech CSE student who completed 156 credits wants to apply for a PhD under self-finance category (g). What is the GATE requirement, and how many PhD course credits would they need to do?",
+      "ground_truth": "Under category (g) self-finance, GATE is NOT mandatory (only a Master's degree is compulsory). However, this student has only a B.Tech and not a Master's degree, so they would NOT be eligible under category (g). If applying under category (a) with GATE score and a CGPA of at least 7.0, they would need to complete 18 PhD course credits.",
+      "category": "factual_multi_doc",
+      "difficulty": "hard",
+      "source_document": "multiple",
+      "source_section": "PhD Regulations Sections 2.1(g) and 3.2",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "credits",
+        "gate",
+        "phd"
+      ],
+      "notes": "Adversarial multi-hop: student profile from doc-2 combined with self-finance eligibility rule in doc-1 reveals the candidate is ineligible under category (g)"
+    },
+    {
+      "id": "Q075",
+      "question": "The B.Tech CSE curriculum at NIT Warangal includes 'Research Methodology' as a course. Is this also offered in the PhD program at NIT Warangal, and in what capacity?",
+      "ground_truth": "Yes. Research Methodology is listed as one of the Institute-Level courses that PhD scholars at NIT Warangal must choose from (at least one institute-level course is mandatory). In the B.Tech context, it would appear in the syllabi section. Both documents confirm NIT Warangal offers it.",
+      "category": "factual_multi_doc",
+      "difficulty": "hard",
+      "source_document": "multiple",
+      "source_section": "PhD Regulations Section 3.3",
+      "requires_multi_hop": true,
+      "tags": [
+        "multi-doc",
+        "phd"
+      ],
+      "notes": "Topic-overlap cross-doc question; tests whether the model links a B.Tech subject name to its appearance in the PhD institute-level course list"
+    },
+    {
+      "id": "Q076",
+      "question": "Compare the minimum PhD course credit requirements for a candidate admitted with an M.Tech degree versus one admitted with a B.Tech degree.",
+      "ground_truth": "M.E./M.Tech./M.Phil./M.S./M.Sc.(Tech.) holders (3-year degree): minimum 12 credits. B.E./B.Tech holders: minimum 18 credits. The B.Tech graduate must complete 6 more credits than an M.Tech graduate.",
+      "category": "comparison",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 3.2 credit table",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "credits"
+      ],
+      "notes": "Side-by-side comparison within a single table; tests whether the model extracts and contrasts two rows correctly"
+    },
+    {
+      "id": "Q077",
+      "question": "Compare the publication requirements before the pre-synopsis seminar for PhD scholars from Engineering departments versus those from the Humanities and Social Sciences department.",
+      "ground_truth": "Engineering scholars: minimum 2 research papers published or accepted in SCI/SCIE/Open Access SCI journals as first author. Humanities and Social Sciences scholars: 3 National and 2 International publications as first author in peer-reviewed journals. HSS scholars need more publications (5 total vs 2 for Engineering).",
+      "category": "comparison",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Section 4.4.2",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "publication"
+      ],
+      "notes": "Intra-section comparison requiring the model to contrast two department-specific sub-clauses within the same regulation paragraph"
+    },
+    {
+      "id": "Q078",
+      "question": "Compare the minimum thesis submission periods for full-time PhD candidates admitted with M.Tech vs M.Sc/B.Tech vs part-time candidates.",
+      "ground_truth": "Full-time with M.E./M.Tech./M.Phil.: minimum 2 years. Full-time with M.Sc./M.A./MBA/B.Tech.: minimum 3 years. Part-time candidates: minimum 4 years. Each category adds 1 year over the previous.",
+      "category": "comparison",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Section 7.1",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "thesis"
+      ],
+      "notes": "Three-row table comparison; tests whether the model retrieves all three thresholds and correctly orders them"
+    },
+    {
+      "id": "Q079",
+      "question": "Compare the credit allocations for Basic Science courses versus Professional Elective courses in the B.Tech CSE overall credit structure.",
+      "ground_truth": "Basic Science courses: 15 credits. Professional Elective courses: 24 credits. Professional Electives carry 9 more credits than Basic Science courses, making them the second largest category after Program Core (82 credits).",
+      "category": "comparison",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "The Overall Credit Structure table",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "elective"
+      ],
+      "notes": "Two-cell comparison within the summary credit table; tests relative magnitude reasoning across course categories"
+    },
+    {
+      "id": "Q080",
+      "question": "Compare what happens when a PhD supervisor (single supervisor) goes on leave for 4 months versus 14 months after the student's Comprehensive Examination.",
+      "ground_truth": "For 4 months (less than 6 months): a care-taker supervisor is appointed by the Department. For 14 months (more than 6 months and less than 2 years): a co-supervisor is appointed by the Department. The care-taker arrangement is temporary; the co-supervisor arrangement is more formal.",
+      "category": "comparison",
+      "difficulty": "hard",
+      "source_document": "phd_regulations",
+      "source_section": "Section 5.9",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "supervisor",
+        "comprehensive-exam",
+        "leave"
+      ],
+      "notes": "Boundary-condition comparison; two scenarios straddle the 6-month threshold — tests retrieval of the correct policy branch for each"
+    },
+    {
+      "id": "Q081",
+      "question": "What is the step-by-step process for submitting a PhD thesis at NIT Warangal, from the pre-synopsis seminar to the award of degree?",
+      "ground_truth": "1) Ensure 2 publications as first author (SCI/SCIE). 2) Present Pre-Synopsis Seminar to DSC. 3) DSC certifies adequacy and DSC Chairman sends report to Dean-Academic. 4) Submit synopsis (max 10 pages) at least 1 month before thesis, with DSC certificate. 5) DSC recommends panel of 10 examiners (5 India, 5 abroad) to Senate Chairman. 6) Submit soft and hard copy of thesis within 3 months of synopsis submission (with plagiarism report, <20% similarity). 7) External examiners evaluate and submit reports. 8) Dean-Academic and Senate Chairman review reports. 9) Viva-voce board examination. 10) Senate recommends award to Board of Governors.",
+      "category": "procedural",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Sections 4.4.2, 4.5, 4.6",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "thesis"
+      ],
+      "notes": "End-to-end multi-section procedural chain; requires stitching content from at least 6 sub-sections in order"
+    },
+    {
+      "id": "Q082",
+      "question": "What is the complete two-part process of the Comprehensive Examination for PhD scholars at NIT Warangal, including committee composition and timing constraints?",
+      "ground_truth": "Part-1 (Written Test): Self-study written exam where DSC frames the syllabus covering all PhD-relevant topics. Minimum 50% required to pass. Only on passing Part-1 can the scholar proceed to Part-2. Part-2 (Seminar): Scholar presents state-of-the-art in proposed research area plus objectives and methodology to the Comprehensive Examination Committee. Committee: DSC members + 2 additional faculty (Associate Professor or Professor level, one from allied department, nominated by DSC Chairman). If unsatisfactory, one retry with at least 1-month gap. Maximum 2 attempts within 1.5 years. Failure leads to option of MS conversion or exit.",
+      "category": "procedural",
+      "difficulty": "medium",
+      "source_document": "phd_regulations",
+      "source_section": "Sections 4.3.1, 4.3.2, 4.3.3",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "comprehensive-exam"
+      ],
+      "notes": "Procedural question spanning three consecutive sub-sections; tests ordered retrieval and completeness of gate conditions and failure paths"
+    },
+    {
+      "id": "Q083",
+      "question": "How does a project fellow (category c) convert from JRF/SRF fellowship to Institute fellowship for PhD at NIT Warangal?",
+      "ground_truth": "1) Must have been selected through a regular PhD admissions advertisement satisfying eligibility criteria. 2) Initially paid from project funds of the PI (addition to department seat count). 3) Must work minimum 1 year in the project before conversion is eligible. 4) Must apply for PhD admission against advertisement during the conversion period. 5) No written test/interview needed if originally selected via PhD admissions advertisement. 6) Apply to Senate Chairman through Supervisor, DSC, Dean-R&C, and Dean-Academic once project closes. 7) Total institute fellowship: maximum 5 years including JRF/SRF period.",
+      "category": "procedural",
+      "difficulty": "hard",
+      "source_document": "phd_regulations",
+      "source_section": "Appendix-I, Sections 3.1–3.4; Section 2.2.4",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "fellowship"
+      ],
+      "notes": "Conversion procedure split across main body and appendix; tests whether the RAG system retrieves content from both locations and stitches them correctly"
+    },
+    {
+      "id": "Q084",
+      "question": "What is the process when both external examiners reject a PhD thesis at NIT Warangal?",
+      "ground_truth": "1) Senate may, on DSC recommendation, permit resubmission of a revised thesis after paying additional prescribed fees. 2) The Senate fixes a suitable time for revision. 3) Examiner observations/comments may be given to the candidate on request (but examiner names are not disclosed). 4) Resubmission without modifications is NOT allowed. 5) Revised thesis is sent to two new external examiners from a fresh panel of 10 experts (5 India, 5 abroad) recommended by the DSC.",
+      "category": "procedural",
+      "difficulty": "hard",
+      "source_document": "phd_regulations",
+      "source_section": "Section 4.6.4",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "thesis"
+      ],
+      "notes": "Edge-case procedural step triggered only on dual examiner rejection; tests retrieval of a low-probability but high-stakes policy path"
+    },
+    {
+      "id": "Q085",
+      "question": "In the B.Tech CSE curriculum, what courses form the 7th semester and how does it prepare students for the 8th semester?",
+      "ground_truth": "7th semester courses: High Performance Computing (CS1401, 3 cr), Professional Elective-IV (3 cr), Professional Elective-V (3 cr), Open Elective-I (2 cr), HPC Lab (CS1403, 2 cr), Seminar and Technical Writing (CS1489, 2 cr), Minor Project (CS1495, 2 cr), Short Term Industrial/EPICS/Research Experience (CS1491, 2 cr). Total: 19 credits. The seminar, minor project, and industry experience prepare students for the 8th semester which is heavily project-focused (Major Project worth 6 credits) with only elective coursework.",
+      "category": "procedural",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "7th and 8th Semester curriculum tables",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "semester"
+      ],
+      "notes": "Two-table procedural reasoning; tests whether the model lists all 7th-sem courses and draws an inferential link to 8th-sem structure"
+    },
+    {
+      "id": "Q086",
+      "question": "What is the maximum allowed plagiarism similarity percentage in a PhD thesis at NIT Warangal, and what is excluded from this calculation?",
+      "ground_truth": "Maximum 20% similarity. The papers previously published by the candidate themselves are excluded from this calculation.",
+      "category": "numerical",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 4.6.1",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "thesis",
+        "plagiarism"
+      ],
+      "notes": "Two-part numerical fact: the threshold AND the exclusion clause; a partial answer (only 20%) should score lower"
+    },
+    {
+      "id": "Q087",
+      "question": "What is the total credit sum across all 8 semesters of B.Tech CSE, and does it match the stated total graded credit requirement?",
+      "ground_truth": "Semester totals: 17 + 21 + 21 + 21 + 21.5 + 20.5 + 19 + 15 = 156 credits. Yes, this matches the stated Total Graded Credit Requirement of 156 credits in the Overall Credit Structure table.",
+      "category": "numerical",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "All semester tables + Overall Credit Structure",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "semester"
+      ],
+      "notes": "Arithmetic verification across 8 data points; tests whether the model can aggregate semester totals and validate against a summary figure"
+    },
+    {
+      "id": "Q088",
+      "question": "How many marks range corresponds to the letter grade 'B' in the PhD course evaluation at NIT Warangal, and what grade point does it carry?",
+      "ground_truth": "Letter grade 'B' corresponds to 70-79 marks range and carries 8 grade points. Faculty may lower this range by a maximum of 10 marks.",
+      "category": "numerical",
+      "difficulty": "easy",
+      "source_document": "phd_regulations",
+      "source_section": "Section 4.1.1 grading tables",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd"
+      ],
+      "notes": "Two-field lookup within the grade table (marks range + grade point); also tests awareness of the ±10 mark faculty discretion clause"
+    },
+    {
+      "id": "Q089",
+      "question": "A PhD scholar under institute fellowship takes temporary withdrawal for one semester. For how many total years can they receive fellowship, and from which year does this allowance apply?",
+      "ground_truth": "The fellowship is paid for a maximum of 5 years. If a temporary withdrawal was availed, the fellowship still covers 5 years even if this period extends into the 6th year from the date of admission (i.e., the withdrawal period does not reduce the total fellowship years).",
+      "category": "numerical",
+      "difficulty": "hard",
+      "source_document": "phd_regulations",
+      "source_section": "Appendix-I, Section 2.2",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "fellowship",
+        "semester",
+        "withdrawal"
+      ],
+      "notes": "Edge-case numerical question about how temporary withdrawal interacts with the 5-year fellowship cap; tests retrieval of the 6th-year exception clause"
+    },
+    {
+      "id": "Q090",
+      "question": "In the B.Tech CSE curriculum, the 5th and 6th semesters have non-integer credits due to Fractal Courses. What are the exact credit totals for these two semesters?",
+      "ground_truth": "5th semester: 21.5 credits (includes Fractal Course-I CS1381 with 0.5 credits). 6th semester: 20.5 credits (includes Fractal Course-II CS1382 with 0.5 credits). The fractional credits come exclusively from the Fractal Courses.",
+      "category": "numerical",
+      "difficulty": "medium",
+      "source_document": "btech_curriculum",
+      "source_section": "5th and 6th Semester curriculum tables",
+      "requires_multi_hop": false,
+      "tags": [
+        "btech",
+        "credits",
+        "semester"
+      ],
+      "notes": "Fractional arithmetic from two tables; tests whether the model correctly identifies and sums the 0.5-credit Fractal Courses"
+    },
+    {
+      "id": "Q091",
+      "question": "What is the monthly hostel fee for PhD scholars residing at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "fee",
+        "hostel",
+        "phd"
+      ],
+      "notes": "Classic unanswerable: hostel fee is an obvious related topic but genuinely absent; tests whether the model refuses to hallucinate a figure",
+      "expected_refusal": "This information is not available in the provided PhD Regulations document. Hostel fees are not mentioned in the regulations."
+    },
+    {
+      "id": "Q092",
+      "question": "What is the exact monthly fellowship amount (in rupees) for a PhD scholar under institute fellowship category (a) at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "Appendix-I Section 2.1 — amount not specified",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "fellowship",
+        "phd"
+      ],
+      "notes": "Near-miss unanswerable: the section exists and mentions fellowship but deliberately omits the rupee amount; tests whether the model quotes the AICTE reference rather than inventing a number",
+      "expected_refusal": "The PhD Regulations document does not specify the exact amount. It only states the fellowship shall be 'as per the AICTE guidelines under instructions of MoE, Govt. of India' and that the Board of Governors may revise rates from time to time."
+    },
+    {
+      "id": "Q093",
+      "question": "What is the minimum GATE score required for PhD admission to the CSE department at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "gate",
+        "phd",
+        "admission"
+      ],
+      "notes": "Specific numeric GATE cutoff is never defined; tests resistance to hallucinating a score from general knowledge about GATE",
+      "expected_refusal": "The PhD Regulations document does not specify any minimum GATE score cutoff. It only states that a 'valid GATE score' is required for certain categories. No numeric threshold is mentioned in either document."
+    },
+    {
+      "id": "Q094",
+      "question": "How many seats are available in the B.Tech CSE program at NIT Warangal per academic year?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable"
+      ],
+      "notes": "Seat count is a natural student query but absent from a curriculum document; tests scope awareness",
+      "expected_refusal": "The B.Tech CSE Curriculum document does not mention the annual intake capacity or number of seats. This information is not available in either provided document."
+    },
+    {
+      "id": "Q095",
+      "question": "What is the minimum attendance percentage required for B.Tech students at NIT Warangal to be eligible to write examinations?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "attendance"
+      ],
+      "notes": "Attendance rules are in a separate academic regulations document not provided; tests whether the model correctly identifies the document-scope gap",
+      "expected_refusal": "Attendance requirements are not specified in the B.Tech CSE Curriculum document provided. This would typically be covered in the institution's academic regulations or student handbook, which are not part of the provided documents."
+    },
+    {
+      "id": "Q096",
+      "question": "What is the formula used to calculate SGPA and CGPA for B.Tech students at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "cgpa",
+        "sgpa"
+      ],
+      "notes": "SGPA/CGPA formula is in the academic regulations, not the curriculum; PhD doc has a grade table but no formula — tests false-positive risk on partial matches",
+      "expected_refusal": "The B.Tech CSE Curriculum document does not contain the SGPA/CGPA calculation formula. While the PhD Regulations provide a grading scale (S/A/B/C/D/P/U with corresponding grade points), no SGPA or CGPA formula is defined in either document provided."
+    },
+    {
+      "id": "Q097",
+      "question": "What are the placement statistics for B.Tech CSE graduates from NIT Warangal in the year 2024?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "placement"
+      ],
+      "notes": "Temporal/dynamic data absent from static curriculum documents; tests hallucination on a plausible but absent query",
+      "expected_refusal": "Placement statistics are not mentioned in the B.Tech CSE Curriculum document. This information is not available in either of the provided documents."
+    },
+    {
+      "id": "Q098",
+      "question": "What is the fee structure for self-finance PhD students (category g) at NIT Warangal?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "source_document": "none",
+      "source_section": "N/A - Not in documents",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable",
+        "fee",
+        "phd"
+      ],
+      "notes": "Fee structure is referenced but never quantified; tests whether the model stops at 'prescribed fee' rather than inventing an amount",
+      "expected_refusal": "The PhD Regulations document does not specify fee amounts for any category of students. Only a 'prescribed fee' for thesis resubmission is mentioned generically in Section 4.6.4, but no specific amounts are given for any category."
+    },
+    {
+      "id": "Q099",
+      "question": "What software programming languages are taught in the Machine Learning Laboratory (CS1310) of the B.Tech CSE program?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "hard",
+      "source_document": "none",
+      "source_section": "N/A - Detailed lab syllabus not in provided curriculum overview",
+      "requires_multi_hop": false,
+      "tags": [
+        "unanswerable"
+      ],
+      "notes": "Course exists in the document but its internal lab syllabus is beyond the extracted content; tests boundary of document depth vs breadth",
+      "expected_refusal": "The B.Tech CSE Curriculum document lists Machine Learning Laboratory (CS1310) in the 6th semester with 0-1-2 structure and 2 credits, but the detailed lab syllabus specifying programming languages is not available in the curriculum overview section extracted from the provided document."
+    },
+    {
+      "id": "Q100",
+      "question": "Can a PhD scholar at NIT Warangal hold a part-time job at a private company while receiving institute fellowship?",
+      "ground_truth": "NOT_IN_DOCUMENTS",
+      "category": "unanswerable",
+      "difficulty": "hard",
+      "source_document": "phd_regulations",
+      "source_section": "Appendix-I Section 6.1",
+      "requires_multi_hop": false,
+      "tags": [
+        "phd",
+        "fellowship"
+      ],
+      "notes": "Borderline unanswerable: a relevant rule exists but does not use the phrase 'part-time job' — tests whether the model maps the general prohibition correctly without over-claiming specificity",
+      "expected_refusal": "Based on the PhD Regulations (Appendix-I, Section 6.1), no scholar is permitted to accept or hold any paid appointment or receive any emoluments, salary, stipend, or other fellowship during the tenure of the award. This effectively prohibits holding a paid job. However, the document does not explicitly address 'part-time work at a private company' as a specific scenario — it covers all paid employment broadly."
+    }
+  ]
+}
